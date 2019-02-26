@@ -8,6 +8,12 @@ von erich (eokgnah)
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 </pre>
 
+Im Zip-Archiv befinden sich die Gerber-Dateien zur Anfertigung der Platine.
+
+Diese Platine wird über die USB-Buchse des R-Link versorgt. Alternativ kann ein externer Spannungsregler von 12 V auf 5 V genutzt werden, um über die OBD-Buchse versorgt zu werden. In diesem Fall sollte ein manueller Ein-/Ausschalter vorgeschaltet werden, da das Display sonst permanent aktiv wäre und eventuell die 12-V-Batterie entladen könnte.
+
+Es kann nur das Display mit kapazitivem Touchscreen verwendet werden, da beim resistiven ein Verkabelungsfehler vorliegt.
+
 ## Verwendete Bauteile
 
 - ESP32 Development Board (z.B. https://www.amazon.de/gp/product/B071P98VTG)
@@ -15,8 +21,7 @@ von erich (eokgnah)
 - CAN-Transceiver-Modul SN65HVD230 (z.B. https://www.amazon.de/gp/product/B00KM6XMXO/)
 - Level Shifter 3,3 V <-> 5 V (für SDA und SCL des Displays)
 - GPS-Modul (z.B. https://www.amazon.de/gp/product/B01N38EMBF/)
-- evtl. bei Versorgung über OBD-Buchse: Spannungsregler 12 V -> 5 V (z.B. https://www.amazon.de/gp/product/B01B7EEWGK/)
-- Kleinteile (CAN-Stecker für OBD Buchse, Piezo-Summer, USB-Kabel und -Buchse, evtl. Ein/Ausschalter, etc.)
+- Kleinteile (CAN-Stecker für OBD Buchse, Piezo-Summer, USB-Kabel und -Buchse, etc.)
 
 ## Verbindungsübersicht
 <pre>
@@ -53,8 +58,7 @@ TX am GPS Modul!
 CAN2 ist derzeit experimentell. 
 
 ## Schaltplan
-![Schaltplan](Platine V5/Can-Display-v5.png)
+![Schaltplan](Can-Display-v5.png)
 
 Rechts unten ist das kapazitive Display. Rechts oben das als Alternative gedachte Display mit resistivem Touchscreen, 
-welches aber nicht verwendet werden kann, da ein Verdrahtungsfehler vorliegt! Die beiden Dioden werden nicht benötigt.
-
+welches aber nicht verwendet werden kann, da ein Verdrahtungsfehler vorliegt! Die beiden Dioden werden somit nicht benötigt.
