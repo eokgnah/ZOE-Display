@@ -8,9 +8,9 @@ von erich (eokgnah)
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 </pre>
 
-Im Zip-Archiv befinden sich die Gerber-Dateien zur Anfertigung der Platine.
+Im Zip-Archiv befinden sich die Gerber-Dateien zur Herstellung der Platine (z.B. bei https://jlcpcb.com/).
 
-Diese Platine wird über die USB-Buchse des R-Link versorgt. Alternativ kann ein externer Spannungsregler von 12 V auf 5 V genutzt werden, um über die OBD-Buchse versorgt zu werden. In diesem Fall sollte ein manueller Ein-/Ausschalter vorgeschaltet werden, da das Display sonst permanent aktiv wäre und eventuell die 12-V-Batterie entladen könnte.
+Diese Platine wird über die USB-Buchse des R-Link versorgt. Alternativ kann ein externer Spannungsregler von 12 V auf 5 V genutzt werden, um über die OBD-Buchse versorgt zu werden. In diesem Fall sollte ein manueller Ein-/Ausschalter vorgeschaltet werden, da das Display sonst permanent aktiv wäre und eventuell die 12-V-Batterie zu tief entladen könnte.
 
 Es kann nur das Display mit kapazitivem Touchscreen verwendet werden, da beim resistiven ein Verkabelungsfehler vorliegt.
 
@@ -61,4 +61,4 @@ CAN2 ist derzeit experimentell.
 ![Schaltplan](Can-Display-v5.png)
 
 Rechts unten ist das kapazitive Display. Rechts oben das als Alternative gedachte Display mit resistivem Touchscreen, 
-welches aber nicht verwendet werden kann, da ein Verdrahtungsfehler vorliegt! Die beiden Dioden werden somit nicht benötigt.
+welches aber nicht verwendet werden kann, da ein Verdrahtungsfehler vorliegt! Die beiden Dioden werden somit auch nicht benötigt.
