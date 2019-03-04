@@ -1,5 +1,3 @@
-## 3D-Druck-Dateien
-
-Achtung: Die Variante für das resistive Display ist nicht für den Einbau mit Platine ausgelegt, sondern nur für lose Verdrahtung!
-
-Eventuell passt aber die Variante für das kapazitive Display auch für das resistive.
+3D-Druck Dienstleister:
+https://3d-printing-price.all3dp.com/
+https://www.s3dproducts.de/3d-druck-service/
