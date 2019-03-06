@@ -16,4 +16,4 @@ Das resisitve Display funktioniert technisch auch, allerdings passt die Platine 
 - Die Bauteile R1, R2, R3, R14 sowie T1, T2 und T3 werden nicht benötigt.
 - Beim Display müssen die Lötbrücken „backlight“, „13“, „12“ und „11“ gesetzt werden.
 - Falls ein Display der neusten Version mit IOREF-Lötbrücke zum Einsatz kommt, sollte diese Lötbrücke auf 3,3 V („3V“) gesetzt werden. Die Widerstände R4 und R7 werden dann nicht benötigt.
-- Ich empfehle, das Display erst anzulöten, wenn Platine und Display bereits lose im 3D-gedruckten Einleger platziert sind. Ansonsten wird es wahrscheinlich sehr schwierig, diese hineinzubekommen.
+- Ich empfehle, das Display erst dann anzulöten, wenn Platine und Display bereits lose im 3D-gedruckten Einleger platziert sind. Ansonsten wird es wahrscheinlich sehr schwierig, diese hineinzubekommen.
