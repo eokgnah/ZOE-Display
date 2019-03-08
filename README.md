@@ -8,11 +8,11 @@
 
 ## Verwendete Bauteile
 
-- ESP32 Development Board (z.B. https://www.amazon.de/gp/product/B071P98VTG)
-- 2,8 Zoll 240 x 320 SPI TFT Panel resistiver Touchscreen (ILI9341, https://www.amazon.de/gp/product/B0749N3S33/)
-- alternativ mit kapazitivem Touchscreen (ADA1947, https://www.amazon.de/gp/product/B00R3R65C0/)
-- GPS-Modul (z.B. https://www.amazon.de/gp/product/B01N38EMBF/)
-- Kleinteile (siehe jeweilige Platinen-Version)
+- ESP32-Development-Board (z.B. https://www.ebay.de/itm/162572643462 oder https://www.amazon.de/gp/product/B071P98VTG)
+- 2,8 Zoll 240 x 320 SPI TFT Panel resistiver Touchscreen (mit Display-Treiber ILI9341, z.B. https://www.amazon.de/gp/product/B0749N3S33/)
+- alternativ mit kapazitivem Touchscreen (ADA1947 mit Display-Treiber ILI9341, z.B. https://www.amazon.de/gp/product/B00R3R65C0/)
+- optional GPS-Modul (z.B. https://www.amazon.de/gp/product/B01N38EMBF/)
+- Kleinteile (siehe Order zur jeweiligen Platinen-Version)
 
 ## Verbindungen mit resistivem Touchscreen
 <pre>
