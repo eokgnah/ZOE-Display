@@ -1,5 +1,13 @@
 ## Platine V7
 
+von Michi (kepppfeff-ZOE)
+
+<pre>
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!! OHNE GEWÄHR, ALLES AUF EIGENE GEFAHR, NUR ZU TESTZWECKEN !!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+</pre>
+
 Diese Version funktioniert mit dem kapazitiven Display einwandfrei und passt auch in den 3D-Druck-Einleger.
 
 Das resisitve Display funktioniert technisch auch, allerdings passt die Platine damit nicht in den 3D-Druck-Einleger!
