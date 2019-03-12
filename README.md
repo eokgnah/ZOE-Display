@@ -12,7 +12,7 @@
 - 2,8 Zoll 240 x 320 SPI TFT Panel resistiver Touchscreen (mit Display-Treiber ILI9341, z.B. https://www.amazon.de/gp/product/B0749N3S33/)
 - alternativ mit kapazitivem Touchscreen (ADA1947 mit Display-Treiber ILI9341, z.B. https://www.amazon.de/gp/product/B00R3R65C0/)
 - SD-Karte (bei resistivem Touchscreen) bzw. microSD-Karte (bei kapazitivem Touchscreen)
-- optional GPS-Modul (z.B. https://www.amazon.de/gp/product/B01N38EMBF/)
+- optional GPS-Modul (z.B. https://www.ebay.de/itm/163512582152 oder https://www.amazon.de/gp/product/B01N38EMBF/)
 - Kleinteile (siehe Ordner zur jeweiligen Platinen-Version)
 
 ## Verbindungen mit resistivem Touchscreen
