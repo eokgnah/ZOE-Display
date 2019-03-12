@@ -17,8 +17,7 @@ Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display aufgelisteten Ha
 - U3: Spannungsregler LC78_03-0.5 oder vergleichbar (Ausgang 3,3 V, 500 mA)
 - Q1: P-Kanal-MOSFET IRFU9024N
 - IC4: CAN-Transceiver MCP2562 (DIP8)
-- D3: Schottky-Diode 1N5817
-- D4: Schottky-Diode 1N5817
+- D3, D4: Schottky-Diode 1N5817
 - T1: NPN-Transistor BC547C (nur bei Verwendung des kapazitiven Displays)
 - T4: PNP-Transistor BC327-25
 - T5, T6: NPN-Transistoren BC547C
