@@ -58,6 +58,22 @@ Zum Zusammenbau der Elektronik benötigt ihr folgendes:
 - Abisolierzange
 - Schlitz-Schraubendreher
 
+## Hinweise zum resistiven Touchscreen
+
+Falls ihr das Display mit resistivem Touchscreen verwendet, solltet ihr zunächst prüfen, ob dieses einen eingebauten Transistor für die LED-Hintergrundbeleuchtung eingebaut hat oder nicht. Nur wenn ein Transistor eingebaut ist, könnt ihr die Helligkeit des Displays verändern.
+Von der Versionsbezeichnung des Displays hängt dies scheinbar nicht ab; ich habe schon Bilder von V1.1 und V1.2 jeweils sowohl mit und ohne Transistor gesehen! Ihr müsst also wirklich den Transistor auf der Platine suchen. Es handelt sich um ein kleines schwarzes Bauteil mit 3 Pins, welches auf der Platine mit **Q1** beschriftet sein muss. Zusätzlich gibt es noch ein gleich aussehendes Bauteil, welches mit U1 beschriftet ist (das ist kein Transistor, sondern ein Spannungsregler). 
+- Falls euer Display *zwei* kleine schwarze Bauteile mit 3 Pins hat, von denen eines mit U1 und eines mit Q1 beschriftet ist, dann habt ihr ein Display *mit* eingebautem Transistor.
+- Falls euer Display nur *ein* kleines schwarzes Bauteil mit 3 Pins hat, welches auf der Platine mit U1 beschriftet ist, dann hat das Display *keinen* Transistor eingebaut. 
+
+## Hinweise zum kapazitiven Touchscreen
+
+Falls ihr das Display mit kapazitivem Touchscreen verwendet, solltet ihr zunächst prüfen, ob ihr die alte oder die neue Version des Display besitzt.
+### Alte Version
+![Alte Version](Bilder/Adafruit kapazitives Display alte Version.jpg)
+
+### Neue Version
+![Neue Version](Adafruit kapazitives Display neue Version.jpg)
+
 ## Platine löten
 ### Schritt 1: Lötbrücken setzen
 
