@@ -65,14 +65,25 @@ Von der Versionsbezeichnung des Displays hängt dies scheinbar nicht ab; ich hab
 - Falls euer Display *zwei* kleine schwarze Bauteile mit 3 Pins hat, von denen eines mit U1 und eines mit Q1 beschriftet ist, dann habt ihr ein Display *mit* eingebautem Transistor.
 - Falls euer Display nur *ein* kleines schwarzes Bauteil mit 3 Pins hat, welches auf der Platine mit U1 beschriftet ist, dann hat das Display *keinen* Transistor eingebaut. 
 
+Das resistive Display besitzt eine Lötbrücke (J1), die ggf. gesetzt werden muss. Hierzu bitte die Hinweise im Abschnitt „Platine löten“ beachten.
+
 ## Hinweise zum kapazitiven Touchscreen
 
-Falls ihr das Display mit kapazitivem Touchscreen verwendet, solltet ihr zunächst prüfen, ob ihr die alte oder die neue Version des Display besitzt.
+Falls ihr das Display mit kapazitivem Touchscreen verwendet, solltet ihr zunächst prüfen, ob ihr die alte oder die neue Version des Displays besitzt. Kleine Anmerkung am Rande: Auf den beiden folgenden Fotos wurde jeweils rechts die 6-polige ISP-Buchse abgelötet, dies ist jedoch bei der Platine V8 nicht erforderlich!
+
 ### Alte Version
-![Alte Version](Bilder/Adafruit kapazitives Display alte Version.jpg)
+![Alte Version](/Platine%20V8/Bilder/Kapazitiv-alt.jpg)
+Hier müsst ihr lediglich die Lötbrücke „backlight #5“ setzen, wie im Foto zu sehen, damit die LED-Hintergrundbeleuchtung gedimmt werden kann. Die Lötbrücken „13“, „12“ und „11“ sind bei dieser Version bereits standardmäßig (über feine Leiterbahnen) gesetzt.
+
+**Bei der Bestückung der Platine sind die beiden 15-kΩ-Widerstände R4 und R7 zwingend erforderlich, da ohne diese der ESP32 eine zu hohe Spannung vom Display abbekommt.**
 
 ### Neue Version
-![Neue Version](Adafruit kapazitives Display neue Version.jpg)
+![Neue Version](/Platine%20V8/Bilder/Kapazitiv-neu.jpg)
+Wie man sieht, gibt es hier die zusätzliche Lötbrücke IOREF. Diese müsst ihr (anders als im Foto!) auf 3,3 V setzen, also das mittlere und das linke (mit „3V“ beschriftete) Pad mit einem Tropfen Lot verbinden. 
+
+**Bei der Bestückung der Platine sollten dann die beiden 15-kΩ-Widerstände R4 und R7 weggelassen werden.**
+
+Außerdem müsst ihr die Lötbrücken „backlight #5“, „13“, „12“ und „11“ setzen (wie im Foto zu sehen).
 
 ## Platine löten
 ### Schritt 1: Lötbrücken setzen
