@@ -14,10 +14,10 @@ Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display aufgelisteten Ha
 
 #### Module & Halbleiter
 - U2: Spannungsregler LC78_05-0.5 oder vergleichbar (Ausgang 5 V, 500 mA) bzw. bei Anschluss einer USB-Buchse 1× Spannungsregler OKI-78SR-5/1.5-W36-C oder vergleichbar (Ausgang 5 V, 1500 mA)
-- U3: Spannungsregler LC78_03-0.5 oder vergleichbar (Ausgang 3,3 V, 500 mA)
+- U3: Spannungsregler LC78_03-0.5 oder vergleichbar (Ausgang 3,3 V, 500 mA), stattdessen kann auch der interne Spannungsregler des ESP32 verwendet werden
 - Q1: P-Kanal-MOSFET IRFU9024N
 - IC4: CAN-Transceiver MCP2562 (DIP8)
-- D3, D4: Schottky-Diode 1N5817
+- D3, D4: Schottky-Dioden 1N5817
 - T1: NPN-Transistor BC547C (nur bei Verwendung des kapazitiven Displays)
 - T4: PNP-Transistor BC327-25
 - T5, T6: NPN-Transistoren BC547C
@@ -46,7 +46,7 @@ Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display aufgelisteten Ha
 - USB-Buchse (optional)
 - Schraubklemmblock 3-polig (RM 5 mm) für Stromversorgung (12 V Eingang, 5 V Ausgang)
 - Schraubklemmblock 2-polig (RM 5 mm) für CAN-Bus
-- Kabel zum Anschluss von OBD-Stecker und USB-Buchse
+- Kabel zum Anschluss von OBD-Stecker und ggf. USB-Buchse
 - Stiftleisten (für GPS-Modul, resistives Display und ggf. als Abstandshalter)
 
 ## Benötigtes Werkzeug und Verbrauchsmaterial
@@ -60,14 +60,18 @@ Zum Zusammenbau der Elektronik benötigt ihr folgendes:
 
 ## Hinweise zum resistiven Touchscreen
 
-Falls ihr das Display mit resistivem Touchscreen verwendet, solltet ihr zunächst prüfen, ob dieses einen eingebauten Transistor für die LED-Hintergrundbeleuchtung eingebaut hat oder nicht. Nur wenn ein Transistor eingebaut ist, könnt ihr die Helligkeit des Displays verändern.
-Von der Versionsbezeichnung des Displays hängt dies scheinbar nicht ab; ich habe schon Bilder von V1.1 und V1.2 jeweils sowohl mit und ohne Transistor gesehen! Ihr müsst also wirklich den Transistor auf der Platine suchen. Es handelt sich um ein kleines schwarzes Bauteil mit 3 Pins, welches auf der Platine mit **Q1** beschriftet sein muss. Zusätzlich gibt es noch ein gleich aussehendes Bauteil, welches mit U1 beschriftet ist (das ist kein Transistor, sondern ein Spannungsregler). 
-- Falls euer Display *zwei* kleine schwarze Bauteile mit 3 Pins hat, von denen eines mit U1 und eines mit Q1 beschriftet ist, dann habt ihr ein Display *mit* eingebautem Transistor.
-- Falls euer Display nur *ein* kleines schwarzes Bauteil mit 3 Pins hat, welches auf der Platine mit U1 beschriftet ist, dann hat das Display *keinen* Transistor eingebaut. 
+Bei Verwendung des Displays mit resistivem Touchscreen werden die Widerstände R1, R4 und R7 sowie der Transistor T1 nicht benötigt.
 
-Das resistive Display besitzt eine Lötbrücke (J1), die ggf. gesetzt werden muss. Hierzu bitte die Hinweise im Abschnitt „Platine löten“ beachten.
+Falls ihr das Display mit resistivem Touchscreen verwendet, solltet ihr zunächst prüfen, ob dieses einen eingebauten Transistor für die LED-Hintergrundbeleuchtung eingebaut hat oder nicht. Nur wenn ein Transistor eingebaut ist, könnt ihr die Helligkeit des Displays steuern.
+Von der Versionsbezeichnung des Displays hängt dies scheinbar nicht ab; ich habe schon Bilder von V1.1 und V1.2 jeweils sowohl mit und ohne Transistor gesehen! Ihr müsst also tatsächlich den Transistor auf der Display-Platine suchen. Es handelt sich um ein kleines schwarzes Bauteil mit drei Pins, welches auf der Platine mit **Q1** beschriftet sein muss (es gibt ein gleich aussehendes Bauteil, welches mit U1 beschriftet ist, das ist aber kein Transistor, sondern ein Spannungsregler). 
+- Falls euer Display *zwei* kleine schwarze Bauteile mit je drei Pins hat, von denen eines mit U1 und eines mit Q1 beschriftet ist, dann habt ihr ein Display *mit* eingebautem Transistor. **In diesem Fall muss für R3 ein 1,5-kΩ-Widerstand eingesetzt werden. Außerdem sollte die Lötbrücke SJ5 gesetzt werden, damit die Display-Helligkeit vom ESP32 gesteuert werden kann.**
+- Falls euer Display nur *ein* kleines schwarzes Bauteil mit drei Pins hat, welches auf der Platine mit U1 beschriftet ist, dann hat das Display *keinen* Transistor eingebaut. **In diesem Fall muss für R3 ein 5,1-Ω-Widerstand eingesetzt werden. Die Lötbrücke SJ5 muss offen bleiben, da sonst der ESP32 Schaden nehmen kann!**
+
+Das resistive Display besitzt eine Lötbrücke (J1), die ggf. gesetzt werden muss. Hierzu bitte den Abschnitt „Hinweise zu den Lötbrücken zur Auswahl der Stromversorgung“ beachten.
 
 ## Hinweise zum kapazitiven Touchscreen
+
+Bei Verwendung des Displays mit kapazitivem Touchscreen wird der Widerstand R3 nicht benötigt.
 
 Falls ihr das Display mit kapazitivem Touchscreen verwendet, solltet ihr zunächst prüfen, ob ihr die alte oder die neue Version des Displays besitzt. Kleine Anmerkung am Rande: Auf den beiden folgenden Fotos wurde jeweils rechts die 6-polige ISP-Buchse abgelötet, dies ist jedoch bei der Platine V8 nicht erforderlich!
 
@@ -84,6 +88,24 @@ Wie man sieht, gibt es hier die zusätzliche Lötbrücke IOREF. Diese müsst ihr
 **Bei der Bestückung der Platine sollten dann die beiden 15-kΩ-Widerstände R4 und R7 weggelassen werden.**
 
 Außerdem müsst ihr die Lötbrücken „backlight #5“, „13“, „12“ und „11“ setzen (wie im Foto zu sehen).
+
+## Hinweise zu den Lötbrücken zur Auswahl der Stromversorgung
+
+Der 3,3-V-Spannungsregler **U3** (LC78_03-0.5 oder ähnlich) ist nicht unbedingt erforderlich, da alternativ auch der interne (lineare) Spannungsregler des ESP32 verwendet werden kann. Zur Auswahl zwischen diesen beiden Varianten dienen die Lötbrücken SJ2, SJ3 und SJ4.
+
+### Falls die Platine mit Spannungsregler U3 bestückt wird, ...
+
+... werden ESP32, GPS-Modul und resistives Display vom Spannungsregler U3 mit 3,3 V versorgt. 
+
+**Hierzu muss die Lötbrücke SJ4 gesetzt werden. Bei Verwendung des resistiven Displays muss zusätzlich dessen Lötbrücke J1 gesetzt werden.**
+
+Wenn die Platine nur über den USB-Port des ESP32 betrieben wird (z.B. zum Flashen), ist das kapazitive Display bei dieser Schaltungsvariante nicht in Betrieb! Wer dies ändern möchte, kann zusätzlich die Lötbrücke SJ2 setzen, allerdings wird dadurch bei Versorgung über den OBD-Port die Spannungswandlung ineffizienter, da der interne Spannungsregler des ESP32 ständig „mitläuft“.
+
+### Falls der Spannungsregler U3 weggelassen wird, ...
+
+... werden ESP32, GPS-Modul und resistives Display vom Spannungsregler U2 mit 5 V versorgt. Alle drei nutzen dann ihre internen linearen Spannungsregler, um die Spannungsdifferenz zu verbraten. 
+
+**Hierzu müssen die Lötbrücken SJ2 und SJ3 gesetzt werden. Bei Verwendung des resistiven Displays muss dessen Lötbrücke J1 offen bleiben.**
 
 ## Platine löten
 ### Schritt 1: Lötbrücken setzen
