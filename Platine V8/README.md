@@ -13,7 +13,7 @@ von Michi (kepppfeff-ZOE)
 Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display aufgelisteten Hauptkomponenten und dem 3D-Druck werden folgende Bauteile benötigt (diese sind alle bei der Sammelbestellung enthalten):
 
 #### Module & Halbleiter
-- U2: Spannungsregler LC78_05-0.5 oder vergleichbar (Ausgang 5 V, 500 mA) bzw. bei Anschluss einer USB-Buchse 1× Spannungsregler OKI-78SR-5/1.5-W36-C oder vergleichbar (Ausgang 5 V, 1500 mA)
+- U2: Spannungsregler LC78_05-0.5 oder vergleichbar (Ausgang 5 V, 500 mA) bzw. bei Anschluss einer USB-Buchse Spannungsregler OKI-78SR-5/1.5-W36-C oder vergleichbar (Ausgang 5 V, 1500 mA)
 - U3: Spannungsregler LC78_03-0.5 oder vergleichbar (Ausgang 3,3 V, 500 mA), stattdessen kann auch der interne Spannungsregler des ESP32 verwendet werden
 - Q1: P-Kanal-MOSFET IRFU9024N
 - IC4: CAN-Transceiver MCP2562 (DIP8)
@@ -65,7 +65,7 @@ Bei Verwendung des Displays mit resistivem Touchscreen werden die Widerstände R
 Falls ihr das Display mit resistivem Touchscreen verwendet, solltet ihr zunächst prüfen, ob dieses einen eingebauten Transistor für die LED-Hintergrundbeleuchtung eingebaut hat oder nicht. Nur wenn ein Transistor eingebaut ist, könnt ihr die Helligkeit des Displays steuern.
 Von der Versionsbezeichnung des Displays hängt dies scheinbar nicht ab; ich habe schon Bilder von V1.1 und V1.2 jeweils sowohl mit und ohne Transistor gesehen! Ihr müsst also tatsächlich den Transistor auf der Display-Platine suchen. Es handelt sich um ein kleines schwarzes Bauteil mit drei Pins, welches auf der Platine mit **Q1** beschriftet sein muss (es gibt ein gleich aussehendes Bauteil, welches mit U1 beschriftet ist, das ist aber kein Transistor, sondern ein Spannungsregler). 
 - Falls euer Display *zwei* kleine schwarze Bauteile mit je drei Pins hat, von denen eines mit U1 und eines mit Q1 beschriftet ist, dann habt ihr ein Display *mit* eingebautem Transistor. **In diesem Fall muss für R3 ein 1,5-kΩ-Widerstand eingesetzt werden. Außerdem sollte die Lötbrücke SJ5 gesetzt werden, damit die Display-Helligkeit vom ESP32 gesteuert werden kann.**
-- Falls euer Display nur *ein* kleines schwarzes Bauteil mit drei Pins hat, welches auf der Platine mit U1 beschriftet ist, dann hat das Display *keinen* Transistor eingebaut. **In diesem Fall muss für R3 ein 5,1-Ω-Widerstand eingesetzt werden. Die Lötbrücke SJ5 muss offen bleiben, da sonst der ESP32 Schaden nehmen kann!**
+- Falls euer Display nur *ein* kleines schwarzes Bauteil mit drei Pins hat, welches auf der Platine mit U1 beschriftet ist, dann hat das Display *keinen* Transistor eingebaut. **In diesem Fall muss für R3 ein 5,1-Ω-Widerstand eingesetzt werden (anders als auf dem Bestückungsdruck angegeben!). Die Lötbrücke SJ5 muss offen bleiben, da sonst der ESP32 Schaden nehmen kann!**
 
 Das resistive Display besitzt eine Lötbrücke (J1), die ggf. gesetzt werden muss. Hierzu bitte den Abschnitt „Hinweise zu den Lötbrücken zur Auswahl der Stromversorgung“ beachten.
 
@@ -110,21 +110,31 @@ Wenn die Platine nur über den USB-Port des ESP32 betrieben wird (z.B. zum Flash
 ## Platine löten
 ### Schritt 1: Lötbrücken setzen
 
+Als erstes solltet ihr alle benötigten Lötbrücken setzen. 
+
+- SJ1 bestimmt über die Ausrichtung des Bildschirms. Bei Verwendung des 3D-gedruckten ZOE-Einlegers sollte diese Lötbrücke für das resistive Display normalerweise auf die Seite mit dem „S“ und für das kapazitive Display auf die Seite mit der „1“ gesetzt werden. An diese Lötbrücke kommt man auch später noch ganz gut dran, sodass es kein Problem ist, wenn sie falsch gesetzt wurde.
+- Wie ihr SJ2, SJ3 und SJ4 setzen müsst, findet ihr unter „Hinweise zu den Lötbrücken zur Auswahl der Stromversorgung“.
+- SJ5 sollte nur bei Verwendung eines resistiven Displays mit eingebautem Transistor gesetzt werden.
+
 ### Schritt 2: Widerstände und Dioden
+
+Als nächstes kommen die flachen Bauteile dran. Bei Widerständen ist die Polarität egal, bei den Dioden ist der Strich, welcher den Minuspol kennzeichnet, auf dem Bestückungsdruck eingezeichnet. 
+
+Bitte beachtet: Je nachdem, welche Display-Version ihr verwendet, müssen die Widerstände R1, R3, R4 und R7 gegebenenfalls nicht oder abweichend bestückt werden.
 
 ### Schritt 3: IC-Sockel
 
 ### Schritt 4: Keramik-Kondensatoren
 
-### Schritt 5: Stiftleiste für GPS-Modul
+### Schritt 5: Piezo-Summer
 
-### Schritt 6: Piezo-Summer
+### Schritt 6: Stiftleiste für GPS-Modul
 
-### Schritt 7: ESP32
+### Schritt 7: Transistoren
 
 ### Schritt 8: Schraubklemmblöcke
 
-### Schritt 9: Transistoren
+### Schritt 9: ESP32
 
 ### Schritt 10: 3,3-V-Spannungsregler
 
@@ -134,7 +144,14 @@ Wenn die Platine nur über den USB-Port des ESP32 betrieben wird (z.B. zum Flash
 
 ### Schritt 13: Display
 
+Bevor ihr Display und Platine zusammenfügt, kontrolliert nochmal, ob alle Lötstellen gut aussehen und ob ihr am Display alle erforderlichen Lötbrücken gesetzt habt, denn ihr kommt anschließend nicht mehr dran!
+
 ### Schritt 14: GPS-Modul
 
 ### Schritt 15: IC einsetzen
 
+## USB-Buchse
+
+![USB-Buchse](/Platine%20V8/Bilder/20190320_204215.jpg)
+
+## OBD-Stecker
