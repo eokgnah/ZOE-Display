@@ -108,7 +108,7 @@ Wenn die Platine nur über den USB-Port des ESP32 betrieben wird (z.B. zum Flash
 **Hierzu müssen die Lötbrücken SJ2 und SJ3 gesetzt werden. Bei Verwendung des resistiven Displays muss dessen Lötbrücke J1 offen bleiben.**
 
 ## Platine löten
-### Schritt 1: Lötbrücken setzen
+#### Schritt 1: Lötbrücken setzen
 
 Als erstes solltet ihr alle benötigten Lötbrücken setzen. 
 
@@ -116,42 +116,65 @@ Als erstes solltet ihr alle benötigten Lötbrücken setzen.
 - Wie ihr SJ2, SJ3 und SJ4 setzen müsst, findet ihr unter „Hinweise zu den Lötbrücken zur Auswahl der Stromversorgung“.
 - SJ5 sollte nur bei Verwendung eines resistiven Displays mit eingebautem Transistor gesetzt werden.
 
-### Schritt 2: Widerstände und Dioden
+#### Schritt 2: Widerstände und Dioden
 
 Als nächstes kommen die flachen Bauteile dran. Bei Widerständen ist die Polarität egal, bei den Dioden ist der Strich, welcher den Minuspol kennzeichnet, auf dem Bestückungsdruck eingezeichnet. 
 
-Bitte beachtet: Je nachdem, welche Display-Version ihr verwendet, müssen die Widerstände R1, R3, R4 und R7 gegebenenfalls nicht oder abweichend bestückt werden.
+Denkt daran, dass die Widerstände R1, R3, R4 und R7 gegebenenfalls nicht oder abweichend bestückt werden müssen, je nachdem, welche Display-Version ihr verwendet.
 
-### Schritt 3: IC-Sockel
+#### Schritt 3: IC-Sockel
 
-### Schritt 4: Keramik-Kondensatoren
+Damit der CAN-Transceiver-IC (IC4) nicht durch die Hitze Schaden nimmt, wird er nicht auf die Platine gelötet, sondern nur ein passender Sockel, in den der IC später eingesteckt wird. Die Einbaurichtung des ICs kann über eine einseitige Einkerbung kontrolliert werden, welche auf dem Bestückungsdruck eingezeichnet ist.
 
-### Schritt 5: Piezo-Summer
+#### Schritt 4: Keramik-Kondensatoren
 
-### Schritt 6: Stiftleiste für GPS-Modul
+Nun sind C2, C3 und C4 an der Reihe. Es können Keramik-Kondensatoren mit 2,5 mm oder 5 mm Rastermaß verwendet werden. Die Polarität ist egal. 
 
-### Schritt 7: Transistoren
+#### Schritt 5: Piezo-Summer
 
-### Schritt 8: Schraubklemmblöcke
+Falls ein Piezo-Summer für Printmontage verbaut wird, sollte dieser je nach Abmessungen jetzt oder etwas später eingelötet werden. Bei einigen Piezo-Summern muss die Polarität beachtet werden (z.B. wenn die Beinchen verschieden lang sind, das längere ist dann Plus), bei anderen nicht.
 
-### Schritt 9: ESP32
+#### Schritt 6: Stiftleiste für GPS-Modul
 
-### Schritt 10: 3,3-V-Spannungsregler
+Als nächstes wird eine Stiftleiste eingelötet, auf die später das GPS-Modul montiert werden kann. Das GPS-Modul selbst sollte jetzt noch nicht mit angelötet werden, da es die Anschlüsse für das kapazitive Display teilweise verdecken würde. Je nach GPS-Modul wird eine Stiftleiste mit 4 oder 5 Pins benötigt. Es empfiehlt sich, die Metallstifte etwas zu kürzen, damit sie später nicht so weit herausstehen.
 
-### Schritt 11: Elektrolyt-Kondensatoren
+Inzwischen sollte die Platine ungefähr so aussehen:
+![Platine](/Platine%20V8/Bilder/Platine1.jpg)
 
-### Schritt 12: 5-V-Spannungsregler
+#### Schritt 7: Transistoren
 
-### Schritt 13: Display
+Jetzt sind die bipolaren Transistoren T1, T4, T5, T6 und der MOSFET Q1 an der Reihe. Bei den bipolaren Transistoren muss jeweils der mittlere Pin vorsichtig etwas zurechtgebogen werden. Die Einbaurichtung dürfte klar sein. Der MOSFET muss so herum eingebaut werden, dass die Beschriftung zum Rand der Platine zeigt (und die Metallfläche entsprechend in Richtung der Kabelanschlüsse). 
+
+#### Schritt 8: Schraubklemmblöcke
+
+#### Schritt 9: ESP32
+
+#### Schritt 10: 3,3-V-Spannungsregler
+
+#### Schritt 11: Elektrolyt-Kondensatoren
+
+#### Schritt 12: 5-V-Spannungsregler
+
+Jetzt sollte die Platine ungefähr so aussehen:
+![Platine](/Platine%20V8/Bilder/Platine2.jpg)
+
+#### Schritt 13: Display
 
 Bevor ihr Display und Platine zusammenfügt, kontrolliert nochmal, ob alle Lötstellen gut aussehen und ob ihr am Display alle erforderlichen Lötbrücken gesetzt habt, denn ihr kommt anschließend nicht mehr dran!
 
-### Schritt 14: GPS-Modul
+#### Schritt 14: GPS-Modul
 
-### Schritt 15: IC einsetzen
+#### Schritt 15: IC einsetzen
 
-## USB-Buchse
+## Verkabelung
+
+#### USB-Buchse
 
 ![USB-Buchse](/Platine%20V8/Bilder/20190320_204215.jpg)
 
-## OBD-Stecker
+#### OBD-Stecker
+
+![OBD-Stecker](/Platine%20V8/Bilder/OBD-Stecker.jpg)
+
+#### Schraubklemmblöcke
+
