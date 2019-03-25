@@ -14,7 +14,7 @@ Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display aufgelisteten Ha
 
 #### Module & Halbleiter
 - U2: Spannungsregler LC78_05-0.5 oder vergleichbar (Ausgang 5 V, 500 mA) bzw. bei Anschluss einer USB-Buchse Spannungsregler OKI-78SR-5/1.5-W36-C oder vergleichbar (Ausgang 5 V, 1500 mA)
-- U3: Spannungsregler LC78_03-0.5 oder vergleichbar (Ausgang 3,3 V, 500 mA), stattdessen kann auch der interne Spannungsregler des ESP32 verwendet werden
+- U3: Spannungsregler LC78_03-0.5 oder LMO78_03-0.5 oder vergleichbar (Ausgang 3,3 V, 500 mA), stattdessen kann auch der interne Spannungsregler des ESP32 verwendet werden
 - Q1: P-Kanal-MOSFET IRFU9024N
 - IC4: CAN-Transceiver MCP2562 (DIP8)
 - D3, D4: Schottky-Dioden 1N5817
@@ -143,15 +143,21 @@ Inzwischen sollte die Platine ungefähr so aussehen:
 
 #### Schritt 7: Transistoren
 
-Jetzt sind die bipolaren Transistoren T1, T4, T5, T6 und der MOSFET Q1 an der Reihe. Bei den bipolaren Transistoren muss jeweils der mittlere Pin vorsichtig etwas zurechtgebogen werden. Die Einbaurichtung dürfte klar sein. Der MOSFET muss so herum eingebaut werden, dass die Beschriftung zum Rand der Platine zeigt (und die Metallfläche entsprechend in Richtung der Kabelanschlüsse). 
+Jetzt sind die bipolaren Transistoren T1, T4, T5, T6 und der MOSFET Q1 an der Reihe. Bei den bipolaren Transistoren muss jeweils der mittlere Pin vorsichtig etwas zurechtgebogen werden. Die Einbaurichtung dürfte selbsterklärend sein. Der MOSFET muss so herum eingebaut werden, dass die Beschriftung zum Rand der Platine zeigt (und die Metallfläche entsprechend in Richtung der Kabelanschlüsse). 
 
 #### Schritt 8: Schraubklemmblöcke
 
 #### Schritt 9: ESP32
 
+Beim ESP32 bietet es sich an, auf die vier äußersten Pins jeweils als Abstandshalter ein Plastikteil einer Stiftleiste draufzuschieben, ähnlich wie hier: https://c1.staticflickr.com/5/4850/39953812743_f40f2e705d.jpg. Damit sitzt er in der perfekten Höhe.
+
 #### Schritt 10: 3,3-V-Spannungsregler
 
+Falls der Spannungsregler LMO78_03-0.5 (wie im gleich folgenden Foto) verwendet wird, sollte dieser eventuell etwas gekippt eingebaut werden, da er sonst etwas zu weit in Richtung des Kondensators C6 übersteht, sodass dieser nicht mehr richtig passt.
+
 #### Schritt 11: Elektrolyt-Kondensatoren
+
+Bei den Elkos (C1, C5 und C6) muss auf die Polarität geachtet werden. Der Pluspol ist durch einen längeren Draht, der Minuspol durch einen auffälligen weißen Strich auf dem Gehäuse gekennzeichnet.
 
 #### Schritt 12: 5-V-Spannungsregler
 
@@ -160,7 +166,11 @@ Jetzt sollte die Platine ungefähr so aussehen:
 
 #### Schritt 13: Display
 
-Bevor ihr Display und Platine zusammenfügt, kontrolliert nochmal, ob alle Lötstellen gut aussehen und ob ihr am Display alle erforderlichen Lötbrücken gesetzt habt, denn ihr kommt anschließend nicht mehr dran!
+Bevor ihr Display und Platine zusammenfügt, kontrolliert nochmal, ob alle Lötstellen gut aussehen und ob ihr am Display alle erforderlichen Lötbrücken gesetzt habt, denn ihr kommt anschließend nicht mehr dran! 
+
+Beim kapazitiven Display empfehle ich, dieses erstmal in den 3D-gedruckten Einleger zu setzen (microSD-Karte nicht vergessen!), anschließend die Platine darauf zu platzieren und erst dann, im „lose eingebauten Zustand“, beides zu verlöten. 
+
+Beim resistiven Display ist dieses Vorgehen nicht notwendig, hier bietet es sich stattdessen an, wieder vier Plastikteile einer Stiftleiste als Abstandshalter zu nutzen. Achtet darauf, dass der SD-Karten-Halter nicht mit von der Platine abstehenden Drähten in Berührung kommt. 
 
 #### Schritt 14: GPS-Modul
 
@@ -170,11 +180,26 @@ Bevor ihr Display und Platine zusammenfügt, kontrolliert nochmal, ob alle Löts
 
 #### USB-Buchse
 
+Eine USB-Buchse Typ A (2.0) besitzt vier Anschlüsse: Masse (GND), D+, D- und +5 V. 
+Masse und +5 V verbindet ihr mit den entsprechenden Anschlüssen der Platine, siehe Foto. 
+Die beiden Datenleitungen (die mittleren Pins) können im einfachsten Fall kurzgeschlossen werden, dies entspricht der EU-standardisierten Signalisierung eines USB-Ladegeräts. Manche USB-Geräte akzeptieren diese Signalisierung allerdings nicht und laden entweder gar nicht oder nur langsam. Um die USB-Buchse für solche Geräte kompatibel zu machen, müsst ihr eventuell mit Widerständen bestimmte Spannungen an die Datenleitungen anlegen (anstatt sie einfach kurzzuschließen). Mehr Infos dazu findet ihr z.B. hier: http://dh2mic.darc.de/files/usb-adapter-v12.pdf
+
 ![USB-Buchse](/Platine%20V8/Bilder/20190320_204215.jpg)
 
 #### OBD-Stecker
 
+Die Belegungen einer OBD2-Schnittstelle findet ihr hier: https://commons.wikimedia.org/wiki/File:OBD2-Buchse-Stecker-Belegung.jpg
+
+Vier Pins werden benötigt: Fahrzeugmasse und +12 V zur Stromversorgung sowie CAN High und CAN Low zur Datenübertragung. 
+
+Achtung: Den Lötkolben nicht zu lange an die Metallstifte des OBD-Steckers halten, da sonst das Plastik drumherum aufweichen kann, wodurch der Metallstift sich womöglich leicht verdreht oder verschiebt. 
+
+Am Ende sollte es etwa so aussehen. Gegebenenfalls sollten die Lötstellen noch mit Heißkleber umhüllt werden, damit kein Kurzschluss entstehen kann.
+
 ![OBD-Stecker](/Platine%20V8/Bilder/OBD-Stecker.jpg)
 
-#### Schraubklemmblöcke
+#### Kabel in Schraubklemmblöcke
 
+Um die Drähte gut in den Schraubklemmblöcken befestigen zu können, sollten die Enden jeweils verdrillt und mit dem Lötkolben verzinnt werden. Wer über das entsprechende Equipment verfügt, kann (und soll) natürlich stattdessen Aderendhülsen verwenden. 
+
+Wenn in die GND-Klemme zwei Drähte sollen (vom OBD-Stecker und der USB-Buchse), sollten diese zusammen verzinnt bzw. zusammen in eine Aderendhülse gecrimpt werden.
