@@ -213,7 +213,7 @@ Achtung: Den Lötkolben nicht zu lange an die Metallstifte des OBD-Steckers halt
 
 Am Ende sollte es etwa so aussehen. Ich habe für Masse und CAN Low einen schwarzen und für +12 V und CAN High einen roten Draht verwendet (ist leider auf dem Foto nicht erkennbar). Gegebenenfalls sollten die Lötstellen noch mit Heißkleber umhüllt werden, damit kein Kurzschluss entstehen kann.
 
-![OBD-Stecker](/Platine%20V8/Bilder/OBD-Stecker.jpg)
+![OBD-Stecker](/Platine%20V8/Bilder/OBD-Stecker-beschriftet.jpg)
 
 #### Schraubklemmblöcke
 
