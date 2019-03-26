@@ -65,7 +65,7 @@ Zum Zusammenbau der Elektronik benötigt ihr Folgendes:
 Bei dieser Platine werden alle Bauteile in Durchsteckmontage (Printmontage) bestückt. Die grundlegende Vorgehensweise, um ein Bauteil einzulöten, ist Folgende:
 
 1. Anschlussdrähte des Bauteils zurechtbiegen (falls nötig).
-2. Bauteil von der Seite, auf der der Bestückungsdruck für das Bauteil angebracht ist, durch die entsprechenden Kontaktlöcher stecken.
+2. Bauteil von der Seite der Platine, auf der der Bestückungsdruck für das Bauteil angebracht ist, durch die entsprechenden Kontaktlöcher stecken.
 3. Platine umdrehen und die herausragenden Drähte (bzw. Metallstifte) nacheinander mit den Leiterbahnen verlöten. Zum Löten sollte man in der Regel zuerst den Lötkolben an die beiden zu verlötenden Metallteile halten (hier Draht und Leiterplattenkontakt), sodass die Lötspitze *beide* Teile erhitzt. Direkt anschließend gibt man das Lötzinn hinzu, welches sich nun kegelförmig (nicht kugelförmig :D) um den Draht verteilen sollte. 
 4. Erst jetzt überstehende Drähte abschneiden (falls vorhanden).
 
