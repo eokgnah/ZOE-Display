@@ -49,15 +49,27 @@ Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display aufgelisteten Ha
 - Kabel zum Anschluss von OBD-Stecker und ggf. USB-Buchse
 - Stiftleisten (für GPS-Modul, resistives Display und ggf. als Abstandshalter)
 
-## Benötigtes Werkzeug und Verbrauchsmaterial
-Zum Zusammenbau der Elektronik benötigt ihr folgendes:
-- Lötkolben, Lötzinn, Lötspitzen-Reinigungstool (feuchter Schwamm, Spiralwolle etc.)
+## Grundlegendes Vorgehen
+
+Wer bereits Platinen bestückt hat, kann diesen Abschnitt gerne überspringen ;-)
+
+Zum Zusammenbau der Elektronik benötigt ihr Folgendes:
+- Lötkolben und Lötzinn, Lötspitzen-Reinigungstool (feuchter Schwamm, Spiralwolle etc.)
 - Seitenschneider bzw. Vornschneider
 - Spitzzange
 - Abisolierzange
 - Schlitz-Schraubendreher
 - Heißklebepistole und -sticks
 - Eventuell (falls ihr etwas falsch verlötet habt): Entlötsaugpumpe, Entlötlitze etc.
+
+Bei dieser Platine werden alle Bauteile in Durchsteckmontage (Printmontage) bestückt. Die grundlegende Vorgehensweise, um ein Bauteil einzulöten, ist Folgende:
+
+1. Anschlussdrähte des Bauteils zurechtbiegen (falls nötig).
+2. Bauteil von der Seite, auf der der Bestückungsdruck für das Bauteil angebracht ist, durch die entsprechenden Kontaktlöcher stecken.
+3. Platine umdrehen und die herausragenden Drähte (bzw. Metallstifte) nacheinander mit den Leiterbahnen verlöten. Zum Löten sollte man in der Regel zuerst den Lötkolben an die beiden zu verlötenden Metallteile halten (hier Draht und Leiterplattenkontakt), sodass die Lötspitze *beide* Teile erhitzt. Direkt anschließend gibt man das Lötzinn hinzu, welches sich nun kegelförmig (nicht kugelförmig :D) um den Draht verteilen sollte. 
+4. Erst jetzt überstehende Drähte abschneiden (falls vorhanden).
+
+Hierbei kann man entweder alle Bauteile einzeln nacheinander durchstecken und verlöten oder auch mehrere auf einmal. Damit die Bauteile während des Lötens nicht nach unten aus der Platine herausrutschen können, macht es Sinn, mit den flachsten Bauteilen anzufangen und sich nach und nach zu den höchsten Bauteilen vorzuarbeiten. Im Idealfall liegt die Platine dann immer auf dem Bauteil auf, welches als Nächstes angelötet werden soll. 
 
 ## Hinweise zum resistiven Touchscreen
 
