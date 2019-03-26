@@ -219,7 +219,7 @@ Zum Schluss noch alles mit Heißkleber versiegeln, damit kein Kurzschluss entste
 
 Die Belegungen einer OBD2-Schnittstelle findet ihr hier: https://commons.wikimedia.org/wiki/File:OBD2-Buchse-Stecker-Belegung.jpg
 
-Vier Pins werden benötigt: Fahrzeugmasse und +12 V zur Stromversorgung sowie CAN High und CAN Low zur Datenübertragung. 
+Vier Pins werden benötigt: Fahrzeugmasse (GND) und +12 V zur Stromversorgung sowie CAN High und CAN Low zur Datenübertragung. 
 
 Achtung: Den Lötkolben nicht zu lange an die Metallstifte des OBD-Steckers halten, da sonst das Plastik drumherum aufweicht, wodurch der Metallstift sich womöglich leicht verdreht oder verschiebt. 
 
