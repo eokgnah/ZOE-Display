@@ -51,12 +51,13 @@ Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display aufgelisteten Ha
 
 ## Benötigtes Werkzeug und Verbrauchsmaterial
 Zum Zusammenbau der Elektronik benötigt ihr folgendes:
-- Lötkolben
-- Lot
+- Lötkolben, Lötzinn, Lötspitzen-Reinigungstool (feuchter Schwamm, Spiralwolle etc.)
 - Seitenschneider bzw. Vornschneider
 - Spitzzange
 - Abisolierzange
 - Schlitz-Schraubendreher
+- Heißklebepistole und -sticks
+- Eventuell (falls ihr etwas falsch verlötet habt): Entlötsaugpumpe, Entlötlitze etc.
 
 ## Hinweise zum resistiven Touchscreen
 
@@ -83,7 +84,7 @@ Hier müsst ihr lediglich die Lötbrücke „backlight #5“ setzen, wie im Foto
 
 ### Neue Version
 ![Neue Version](/Platine%20V8/Bilder/Kapazitiv-neu.jpg)
-Wie man sieht, gibt es hier die zusätzliche Lötbrücke IOREF. Diese müsst ihr (anders als im Foto!) auf 3,3 V setzen, also das mittlere und das linke (mit „3V“ beschriftete) Pad mit einem Tropfen Lot verbinden. 
+Wie man sieht, gibt es hier die zusätzliche Lötbrücke IOREF. Diese müsst ihr (anders als im Foto!) auf 3,3 V setzen, also das mittlere und das linke (mit „3V“ beschriftete) Pad mit einem Tropfen Lötzinn verbinden. 
 
 **Bei der Bestückung der Platine sollten dann die beiden 15-kΩ-Widerstände R4 und R7 weggelassen werden.**
 
@@ -120,8 +121,6 @@ Als erstes solltet ihr alle benötigten Lötbrücken setzen.
 
 Als nächstes kommen die flachen Bauteile dran. Bei Widerständen ist die Polarität egal, bei den Dioden ist der Strich, welcher den Minuspol kennzeichnet, auf dem Bestückungsdruck eingezeichnet. 
 
-Denkt daran, dass die Widerstände R1, R3, R4 und R7 gegebenenfalls nicht oder abweichend bestückt werden müssen, je nachdem, welche Display-Version ihr verwendet.
-
 #### Schritt 3: IC-Sockel
 
 Damit der CAN-Transceiver-IC (IC4) nicht durch die Hitze Schaden nimmt, wird er nicht auf die Platine gelötet, sondern nur ein passender Sockel, in den der IC später eingesteckt wird. Die Einbaurichtung des ICs kann über eine einseitige Einkerbung kontrolliert werden, welche auf dem Bestückungsdruck eingezeichnet ist.
@@ -136,9 +135,10 @@ Falls ein Piezo-Summer für Printmontage verbaut wird, sollte dieser je nach Abm
 
 #### Schritt 6: Stiftleiste für GPS-Modul
 
-Als nächstes wird eine Stiftleiste eingelötet, auf die später das GPS-Modul montiert werden kann. Das GPS-Modul selbst sollte jetzt noch nicht mit angelötet werden, da es die Anschlüsse für das kapazitive Display teilweise verdecken würde. Je nach GPS-Modul wird eine Stiftleiste mit 4 oder 5 Pins benötigt. Es empfiehlt sich, die Metallstifte etwas zu kürzen, damit sie später nicht so weit herausstehen.
+Als Nächstes wird eine Stiftleiste eingelötet, auf die später das GPS-Modul montiert werden kann. Das GPS-Modul selbst sollte jetzt noch nicht mit angelötet werden, da es die Anschlüsse für das kapazitive Display teilweise verdecken würde. Je nach GPS-Modul wird eine Stiftleiste mit 4 oder 5 Pins benötigt. Es empfiehlt sich, die Metallstifte etwas zu kürzen, damit sie später nicht so weit herausstehen.
 
 Inzwischen sollte die Platine ungefähr so aussehen:
+
 ![Platine](/Platine%20V8/Bilder/Platine1.jpg)
 
 #### Schritt 7: Transistoren
@@ -147,13 +147,15 @@ Jetzt sind die bipolaren Transistoren T1, T4, T5, T6 und der MOSFET Q1 an der Re
 
 #### Schritt 8: Schraubklemmblöcke
 
+Nun werden die 3-polige Schraubklemme für die Stromversorgung und die 2-polige Schraubklemme für den CAN-Bus eingelötet.
+
 #### Schritt 9: ESP32
 
 Beim ESP32 bietet es sich an, auf die vier äußersten Pins jeweils als Abstandshalter ein Plastikteil einer Stiftleiste draufzuschieben, ähnlich wie hier: https://c1.staticflickr.com/5/4850/39953812743_f40f2e705d.jpg. Damit sitzt er in der perfekten Höhe.
 
 #### Schritt 10: 3,3-V-Spannungsregler
 
-Falls der Spannungsregler LMO78_03-0.5 (wie im gleich folgenden Foto) verwendet wird, sollte dieser eventuell etwas gekippt eingebaut werden, da er sonst etwas zu weit in Richtung des Kondensators C6 übersteht, sodass dieser nicht mehr richtig passt.
+Der 3,3-V-Spannungsregler kommt in das mit „LC78_03-0.5“ beschriftete Rechteck. Falls der Spannungsregler LMO78_03-0.5 verwendet wird (wie im gleich folgenden Foto), sollte dieser eventuell ein wenig gekippt eingebaut werden, da er sonst etwas zu weit in Richtung des Kondensators C6 übersteht, sodass dieser nicht mehr richtig passt.
 
 #### Schritt 11: Elektrolyt-Kondensatoren
 
@@ -161,7 +163,10 @@ Bei den Elkos (C1, C5 und C6) muss auf die Polarität geachtet werden. Der Plusp
 
 #### Schritt 12: 5-V-Spannungsregler
 
-Jetzt sollte die Platine ungefähr so aussehen:
+Der 5-V-Spannungsregler gehört in das mit „LC78_05-0.5“ beschriftete Rechteck. 
+
+Anschließend sollte die Platine ungefähr so aussehen:
+
 ![Platine](/Platine%20V8/Bilder/Platine2.jpg)
 
 #### Schritt 13: Display
@@ -170,21 +175,33 @@ Bevor ihr Display und Platine zusammenfügt, kontrolliert nochmal, ob alle Löts
 
 Beim kapazitiven Display empfehle ich, dieses erstmal in den 3D-gedruckten Einleger zu setzen (microSD-Karte nicht vergessen!), anschließend die Platine darauf zu platzieren und erst dann, im „lose eingebauten Zustand“, beides zu verlöten. 
 
-Beim resistiven Display ist dieses Vorgehen nicht notwendig, hier bietet es sich stattdessen an, wieder vier Plastikteile einer Stiftleiste als Abstandshalter zu nutzen. Achtet darauf, dass der SD-Karten-Halter nicht mit von der Platine abstehenden Drähten in Berührung kommt. 
+Beim resistiven Display ist dieses Vorgehen nicht erforderlich, hier bietet es sich stattdessen an, wieder vier Plastikteile einer Stiftleiste als Abstandshalter zu nutzen. Achtet darauf, dass der SD-Karten-Halter nicht mit von der Platine abstehenden Drähten in Berührung kommt. 
 
 #### Schritt 14: GPS-Modul
 
+Als Nächstes wird das GPS-Modul auf die zuvor eingelötete Stiftleiste gelötet.
+
 #### Schritt 15: IC einsetzen
+
+Zu guter Letzt wird der CAN-Transceiver-IC in den zuvor eingelöteten Sockel gesteckt. Bei „fabrikfrischen“ ICs müssen hierzu meist die Beinchen etwas nach innen gebogen werden, damit sie passen. 
 
 ## Verkabelung
 
+Die Drähte zur USB-Buchse, zum OBD-Stecker und zum Piezo-Summer (falls einer mit Kabeln verwendet wird) können auf drei verschiedene Arten an der Platine angeschlossen werden: Durch Anschrauben in angelötete Schraubklemmblöcke, über die SMD-Lötpads oder durch direktes Einlöten der Kabel in die Löcher für die Schraubklemmblöcke. 
+
+Die Beschriftung der Anschlüsse befindet sich jeweils an den SMD-Lötpads, die direkt an die zugehörigen Schraubklemmen angrenzen.
+
 #### USB-Buchse
 
-Eine USB-Buchse Typ A (2.0) besitzt vier Anschlüsse: Masse (GND), D+, D- und +5 V. 
-Masse und +5 V verbindet ihr mit den entsprechenden Anschlüssen der Platine, siehe Foto. 
-Die beiden Datenleitungen (die mittleren Pins) können im einfachsten Fall kurzgeschlossen werden, dies entspricht der EU-standardisierten Signalisierung eines USB-Ladegeräts. Manche USB-Geräte akzeptieren diese Signalisierung allerdings nicht und laden entweder gar nicht oder nur langsam. Um die USB-Buchse für solche Geräte kompatibel zu machen, müsst ihr eventuell mit Widerständen bestimmte Spannungen an die Datenleitungen anlegen (anstatt sie einfach kurzzuschließen). Mehr Infos dazu findet ihr z.B. hier: http://dh2mic.darc.de/files/usb-adapter-v12.pdf
+Um die USB-Buchse in den 3D-gedruckten Einleger zu bekommen, müssen zunächst die beiden Montagepins des Buchsengehäuses etwas gekürzt werden. Anschließend die vier Anschlusspins (Masse, D+, D- und +5 V) nach hinten umbiegen und darauf achten, dass sie nicht mit dem Buchsengehäuse in Berührung kommen. 
+
+An Masse (GND) und +5 V lötet ihr Drähte an, die dann an der Platine angeschlossen werden können. Achtet darauf, dass durch das Lötzinn keine Verbindung mit dem Buchsengehäuse hergestellt wird.
+
+Die beiden Datenleitungen (die mittleren Pins) können im einfachsten Fall kurzgeschlossen werden, dies entspricht der EU-standardisierten Signalisierung eines USB-Ladegeräts. Hierzu einfach die beiden Drähte etwas zur Mitte biegen und mit einem Tropfen Lötzinn verbinden (wieder darf keine Verbindung zum Buchsengehäuse entstehen). Manche USB-Geräte akzeptieren diese Signalisierung allerdings nicht und laden entweder gar nicht oder nur langsam. Um die USB-Buchse für solche Geräte kompatibel zu machen, müsst ihr eventuell statt der Kurzschlussmethode mit Widerständen bestimmte Spannungen an die Datenleitungen anlegen. Mehr Infos dazu findet ihr z.B. hier: http://dh2mic.darc.de/files/usb-adapter-v12.pdf
 
 ![USB-Buchse](/Platine%20V8/Bilder/20190320_204215.jpg)
+
+Zum Schluss noch alles mit Heißkleber versiegeln, damit kein Kurzschluss entstehen kann und die USB-Buchse nicht herausrutscht.
 
 #### OBD-Stecker
 
@@ -192,14 +209,14 @@ Die Belegungen einer OBD2-Schnittstelle findet ihr hier: https://commons.wikimed
 
 Vier Pins werden benötigt: Fahrzeugmasse und +12 V zur Stromversorgung sowie CAN High und CAN Low zur Datenübertragung. 
 
-Achtung: Den Lötkolben nicht zu lange an die Metallstifte des OBD-Steckers halten, da sonst das Plastik drumherum aufweichen kann, wodurch der Metallstift sich womöglich leicht verdreht oder verschiebt. 
+Achtung: Den Lötkolben nicht zu lange an die Metallstifte des OBD-Steckers halten, da sonst das Plastik drumherum aufweicht, wodurch der Metallstift sich womöglich leicht verdreht oder verschiebt. 
 
-Am Ende sollte es etwa so aussehen. Gegebenenfalls sollten die Lötstellen noch mit Heißkleber umhüllt werden, damit kein Kurzschluss entstehen kann.
+Am Ende sollte es etwa so aussehen. Ich habe für Masse und CAN Low einen schwarzen und für +12 V und CAN High einen roten Draht verwendet (ist leider auf dem Foto nicht erkennbar). Gegebenenfalls sollten die Lötstellen noch mit Heißkleber umhüllt werden, damit kein Kurzschluss entstehen kann.
 
 ![OBD-Stecker](/Platine%20V8/Bilder/OBD-Stecker.jpg)
 
-#### Kabel in Schraubklemmblöcke
+#### Schraubklemmblöcke
 
 Um die Drähte gut in den Schraubklemmblöcken befestigen zu können, sollten die Enden jeweils verdrillt und mit dem Lötkolben verzinnt werden. Wer über das entsprechende Equipment verfügt, kann (und soll) natürlich stattdessen Aderendhülsen verwenden. 
 
-Wenn in die GND-Klemme zwei Drähte sollen (vom OBD-Stecker und der USB-Buchse), sollten diese zusammen verzinnt bzw. zusammen in eine Aderendhülse gecrimpt werden.
+Wer eine USB-Buchse verwendet, muss zwei GND-Drähte in eine Schraubklemme zwängen. Hierzu sollten diese beiden Drähte zusammen verzinnt bzw. zusammen in eine Aderendhülse gecrimpt werden.
