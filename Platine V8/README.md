@@ -165,11 +165,13 @@ Nun werden die 3-polige Schraubklemme für die Stromversorgung und die 2-polige 
 
 #### Schritt 9: ESP32
 
-Beim ESP32 bietet es sich an, auf die vier äußersten Pins jeweils als Abstandshalter ein Plastikteil einer Stiftleiste draufzuschieben, ähnlich wie hier: https://c1.staticflickr.com/5/4850/39953812743_f40f2e705d.jpg. Damit sitzt er in der perfekten Höhe. Bei günstigen ESP32 sind oft die Stiftleisten nicht ganz gerade eingelötet, dann müsst ihr diese noch etwas zurechtbiegen, um sie in die Kontaktlöcher der Platine zu bekommen. 
+Die Platine ist kompatibel zu zwei verschieden großen ESP32-Boards (mit dem selben Pinout), daher ist die eine Lochreihe doppelt vorhanden. 
+
+Bei günstigen ESP32-Boards sind oft die Stiftleisten nicht ganz gerade eingelötet, dann müsst ihr diese noch etwas zurechtbiegen, um sie in die Kontaktlöcher der Platine zu bekommen. Damit der ESP32 nachher in der perfekten Höhe (und gerade) montiert ist, bietet es sich an, auf die vier äußersten Pins jeweils als Abstandshalter ein Plastikteil einer Stiftleiste draufzuschieben, ähnlich wie hier: https://c1.staticflickr.com/5/4850/39953812743_f40f2e705d.jpg. 
 
 #### Schritt 10: 3,3-V-Spannungsregler
 
-Der 3,3-V-Spannungsregler kommt in das mit „LC78_03-0.5“ beschriftete Rechteck. Falls der Spannungsregler LMO78_03-0.5 verwendet wird (wie im gleich folgenden Foto), sollte dieser eventuell ein wenig gekippt eingebaut werden, da er sonst etwas zu weit in Richtung des Kondensators C6 übersteht, sodass dieser nicht mehr richtig passt.
+Der 3,3-V-Spannungsregler kommt in das mit „LC78_**03**-0.5“ beschriftete Rechteck. Falls der Spannungsregler LMO78_03-0.5 verwendet wird (wie im gleich folgenden Foto), sollte dieser eventuell ein wenig gekippt eingebaut werden, da er sonst etwas zu weit in Richtung des Kondensators C6 übersteht, sodass dieser nicht mehr richtig passt.
 
 #### Schritt 11: Elektrolyt-Kondensatoren
 
@@ -177,7 +179,7 @@ Bei den Elkos (C1, C5 und C6) muss auf die Polarität geachtet werden. Der Plusp
 
 #### Schritt 12: 5-V-Spannungsregler
 
-Der 5-V-Spannungsregler gehört in das mit „LC78_05-0.5“ beschriftete Rechteck. 
+Der 5-V-Spannungsregler gehört in das mit „LC78_**05**-0.5“ beschriftete Rechteck. 
 
 Anschließend sollte die Platine ungefähr so aussehen:
 
@@ -187,7 +189,7 @@ Anschließend sollte die Platine ungefähr so aussehen:
 
 Bevor ihr Display und Platine zusammenfügt, kontrolliert nochmal, ob alle Lötstellen gut aussehen und ob ihr am Display alle erforderlichen Lötbrücken gesetzt habt, denn ihr kommt anschließend nicht mehr dran! 
 
-Beim kapazitiven Display empfehle ich, dieses erstmal in den 3D-gedruckten Einleger zu setzen (microSD-Karte nicht vergessen!), anschließend die Platine darauf zu platzieren und erst dann, im „lose eingebauten Zustand“, beides zu verlöten. 
+Beim kapazitiven Display empfehle ich, dieses erstmal in den 3D-gedruckten Einleger zu setzen (microSD-Karte einlegen und Schutzfolie abziehen!), anschließend die Platine darauf zu platzieren und erst dann, im „lose eingebauten Zustand“, beides zu verlöten. 
 
 Beim resistiven Display ist dieses Vorgehen nicht erforderlich, hier bietet es sich stattdessen an, wieder vier Plastikteile einer Stiftleiste als Abstandshalter zu nutzen. Achtet darauf, dass der SD-Karten-Halter nicht mit von der Platine abstehenden Drähten in Berührung kommt. 
 
@@ -197,7 +199,7 @@ Als Nächstes wird das GPS-Modul auf die zuvor eingelötete Stiftleiste gelötet
 
 #### Schritt 15: IC einsetzen
 
-Zu guter Letzt wird der CAN-Transceiver-IC in den zuvor eingelöteten Sockel gesteckt. Bei „fabrikfrischen“ ICs müssen hierzu meist die Beinchen etwas nach innen gebogen werden, damit sie passen. 
+Zu guter Letzt wird der CAN-Transceiver-IC in den zuvor eingelöteten Sockel gesteckt. Ausrichtung beachten! Bei „fabrikfrischen“ ICs müssen vorher meist noch die Beinchen etwas nach innen gebogen werden. 
 
 ## Verkabelung
 
