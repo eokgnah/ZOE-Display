@@ -225,7 +225,9 @@ Vier Pins werden benötigt: Fahrzeugmasse (GND) und +12 V zur Stromversorgung so
 
 Achtung: Den Lötkolben nicht zu lange an die Metallstifte des OBD-Steckers halten, da sonst das Plastik drumherum aufweicht, wodurch der Metallstift sich womöglich leicht verdreht oder verschiebt. 
 
-Am Ende sollte es etwa so aussehen. Ich habe für Masse und CAN Low einen schwarzen und für +12 V und CAN High einen roten Draht verwendet (ist leider auf dem Foto nicht erkennbar). Gegebenenfalls sollten die Lötstellen noch mit Heißkleber umhüllt werden, damit kein Kurzschluss entstehen kann.
+Wenn ihr den 3D-gedruckten ZOE-Einleger verwendet, solltet ihr, nachdem ihr alle Kabel angelötet habt, die Kontaktstifte des OBD-Steckers zur Seite umbiegen (bzw. die unbenutzten entfernen), da diese sonst zu weit herausstehen.
+
+Am Ende sollte es etwa so aussehen. Ich habe für Masse und CAN Low einen schwarzen und für +12 V und CAN High einen roten Draht verwendet (ist leider auf dem Foto nicht erkennbar). Gegebenenfalls sollten die Lötstellen anschließend noch mit Heißkleber oder Schrumpfschläuchen umhüllt werden, damit kein Kurzschluss entstehen kann.
 
 ![OBD-Stecker](/Platine%20V8/Bilder/OBD-Stecker-beschriftet.jpg)
 
