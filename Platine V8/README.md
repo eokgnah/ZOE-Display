@@ -80,7 +80,9 @@ Von der Versionsbezeichnung des Displays hängt dies scheinbar nicht ab; ich hab
 - Falls euer Display *zwei* kleine schwarze Bauteile mit je drei Pins hat, von denen eines mit U1 und eines mit Q1 beschriftet ist, dann habt ihr ein Display *mit* eingebautem Transistor. **In diesem Fall muss für R3 ein 1,5-kΩ-Widerstand eingesetzt werden. Außerdem sollte die Lötbrücke SJ5 gesetzt werden, damit die Display-Helligkeit vom ESP32 gesteuert werden kann.**
 - Falls euer Display nur *ein* kleines schwarzes Bauteil mit drei Pins hat, dann hat das Display *keinen* Transistor eingebaut. **In diesem Fall muss für R3 ein 5,1-Ω-Widerstand eingesetzt werden (anders als auf dem Bestückungsdruck angegeben!). Die Lötbrücke SJ5 muss offen bleiben, da sonst der ESP32 Schaden nehmen kann!**
 
-Das resistive Display besitzt eine Lötbrücke (J1), die ggf. gesetzt werden muss. Hierzu bitte den Abschnitt „Hinweise zu den Lötbrücken zur Auswahl der Stromversorgung“ beachten.
+In der Regel müsst ihr auf euer Display noch eine 4-polige Stiftleiste für die Anschlüsse der SD-Karte einlöten. Hier darauf achten, dass ihr diese möglichst gerade montiert, damit das Display später perfekt auf die Platine passt. Am Besten gelingt dies, wenn ihr das Display zum Anlöten der 4-polige Stiftleiste lose in die entsprechenden Kontaktlöcher der (noch unbestückten) Platine legt.
+
+Das resistive Display besitzt zudem eine Lötbrücke (J1), die ggf. gesetzt werden muss. Hierzu bitte den Abschnitt „Hinweise zu den Lötbrücken zur Auswahl der Stromversorgung“ beachten.
 
 ## Hinweise zum kapazitiven Touchscreen
 
@@ -163,7 +165,7 @@ Nun werden die 3-polige Schraubklemme für die Stromversorgung und die 2-polige 
 
 #### Schritt 9: ESP32
 
-Beim ESP32 bietet es sich an, auf die vier äußersten Pins jeweils als Abstandshalter ein Plastikteil einer Stiftleiste draufzuschieben, ähnlich wie hier: https://c1.staticflickr.com/5/4850/39953812743_f40f2e705d.jpg. Damit sitzt er in der perfekten Höhe.
+Beim ESP32 bietet es sich an, auf die vier äußersten Pins jeweils als Abstandshalter ein Plastikteil einer Stiftleiste draufzuschieben, ähnlich wie hier: https://c1.staticflickr.com/5/4850/39953812743_f40f2e705d.jpg. Damit sitzt er in der perfekten Höhe. Bei günstigen ESP32 sind oft die Stiftleisten nicht ganz gerade eingelötet, dann müsst ihr diese noch etwas zurechtbiegen, um sie in die Kontaktlöcher der Platine zu bekommen. 
 
 #### Schritt 10: 3,3-V-Spannungsregler
 
