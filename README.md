@@ -10,7 +10,7 @@
 
 - ESP32-Development-Board (z.B. https://www.ebay.de/itm/162572643462 oder https://www.amazon.de/gp/product/B071P98VTG)
 - 2,8 Zoll 240 x 320 SPI TFT Panel resistiver Touchscreen (mit Display-Treiber ILI9341, z.B. https://www.amazon.de/gp/product/B0749N3S33/)
-- alternativ mit kapazitivem Touchscreen (ADA1947 mit Display-Treiber ILI9341, z.B. https://www.amazon.de/gp/product/B00R3R65C0/)
+- alternativ mit kapazitivem Touchscreen (ADA1947 mit Display-Treiber ILI9341, z.B. https://www.amazon.de/gp/product/B00R3R65C0/ oder https://www.mouser.de/ProductDetail/Adafruit/1947?qs=GURawfaeGuArmJSJoJoDJA%3D%3D)
 - SD-Karte (bei resistivem Touchscreen) bzw. microSD-Karte (bei kapazitivem Touchscreen)
 - optional GPS-Modul (z.B. https://www.ebay.de/itm/163512582152 oder https://www.amazon.de/gp/product/B01N38EMBF/)
 - Kleinteile (siehe Ordner zur jeweiligen Platinen-Version)
