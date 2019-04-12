@@ -10,9 +10,9 @@
 
 - ESP32-Development-Board (z.B. https://www.ebay.de/itm/162572643462 oder https://www.amazon.de/gp/product/B071P98VTG)
 - 2,8 Zoll 240 x 320 SPI TFT Panel resistiver Touchscreen (mit Display-Treiber ILI9341, z.B. https://www.amazon.de/gp/product/B0749N3S33/)
-- alternativ mit kapazitivem Touchscreen (ADA1947 mit Display-Treiber ILI9341, z.B. https://www.amazon.de/gp/product/B00R3R65C0/ oder https://www.mouser.de/ProductDetail/Adafruit/1947?qs=GURawfaeGuArmJSJoJoDJA%3D%3D)
+- alternativ mit kapazitivem Touchscreen (Adafruit 1947 mit Display-Treiber ILI9341, z.B. https://www.amazon.de/gp/product/B00R3R65C0/ oder https://www.mouser.de/ProductDetail/Adafruit/1947?qs=GURawfaeGuArmJSJoJoDJA%3D%3D)
 - SD-Karte (bei resistivem Touchscreen) bzw. microSD-Karte (bei kapazitivem Touchscreen)
-- optional GPS-Modul (z.B. https://www.ebay.de/itm/163512582152 oder https://www.amazon.de/gp/product/B01N38EMBF/)
+- optional GPS-Modul (z.B. https://www.ebay.de/itm/163636495985 oder https://www.amazon.de/gp/product/B01N38EMBF/)
 - Kleinteile (siehe Ordner zur jeweiligen Platinen-Version)
 
 ## Verbindungen mit resistivem Touchscreen
@@ -78,9 +78,6 @@ Display         CARDCS      G13         G2      DC          Display
                 (Flash)     G11         G7      (Flash)
                             5V          G6      (Flash)
 </pre>                    
-Die beiden Leitungen für den I²C-Bus (SCL und SDA) müssen über einen Level Shifter geführt 
-werden (sowohl ESP32 als auch das Display arbeiten mit Pull Ups auf VCC. Der ESP32 allerdings 
-mit 3.3 Volt, das Display mit 5 Volt. Würde nicht ausprobieren wollen, wer ohne Level Shifter gewinnt...)
 RX und TX gibt den Pin an, mit dem es verbunden werden muss. GPS TX muss also auf den Pin
 TX am GPS Modul! 
 
@@ -97,4 +94,4 @@ POWER OFF = Ausschalt-Pin für die Stromversorgung über den OBD-Port
 ## Allgemein
 -  Beim Betrieb des resistiven Displays mit 3,3 V sollte der Jumper J1 am Display gesetzt (verbunden) werden (Ausschalten
 des Spannungsreglers des Displays, sonst sinken die 3,3 V auf irgendwas unter 3 V). Der Touch IRQ Pin bleibt leer.
-- Das Display mit kapazitivem Touchscreen erhält 5 V Versorgungsspannung.
+- Das Display mit kapazitivem Touchscreen erhält 5 V Versorgungsspannung. Falls das verwendete Display keine IOREF-Lötbrücke besitzt bzw. diese auf 5 V gesetzt wurde, muss eine geeignete Maßnahme vorgesehen werden, um die Spannungspegel am I²C-Bus auf max. 3,3 V zu begrenzen (das Display zieht die Leitungen nämlich mit 10-kΩ-Pull-Up-Widerständen gegen 5 V).
