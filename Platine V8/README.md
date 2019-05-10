@@ -171,7 +171,8 @@ Bei günstigen ESP32-Boards sind oft die Stiftleisten nicht ganz gerade eingelö
 
 #### Schritt 10: 3,3-V-Spannungsregler
 
-Der 3,3-V-Spannungsregler kommt in das mit „LC78_**03**-0.5“ beschriftete Rechteck. Einbaurichtung beachten (bei Unsicherheit am Besten im Datenblatt nachschauen, auf der Platine ist der Eingang mit VIN und der Ausgang mit VO beschriftet)! Falls der Spannungsregler LMO78_03-0.5 verwendet wird (wie im gleich folgenden Foto), sollte dieser eventuell ein wenig gekippt eingebaut werden, da er sonst etwas zu weit in Richtung des Kondensators C6 übersteht, sodass dieser nicht mehr richtig passt.
+Der 3,3-V-Spannungsregler kommt in das mit „LC78_**03**-0.5“ beschriftete Rechteck. Einbaurichtung beachten! In der Regel sollte die Bauteilbeschriftung in Richtung des POWER-Schraubklemmblocks zeigen. Bei Unsicherheit am Besten im Datenblatt nachschauen, auf der Platine ist der Eingang mit VIN und der Ausgang mit VO beschriftet. 
+Falls der Spannungsregler LMO78_03-0.5 verwendet wird (wie im gleich folgenden Foto), sollte dieser eventuell ein wenig gekippt eingebaut werden, da er sonst etwas zu weit in Richtung des Kondensators C6 übersteht, sodass dieser nicht mehr richtig passt.
 
 #### Schritt 11: Elektrolyt-Kondensatoren
 
@@ -179,7 +180,7 @@ Bei den Elkos (C1, C5 und C6) muss auf die Polarität geachtet werden. Der Plusp
 
 #### Schritt 12: 5-V-Spannungsregler
 
-Der 5-V-Spannungsregler gehört in das mit „LC78_**05**-0.5“ beschriftete Rechteck. Einbaurichtung beachten (bei Unsicherheit am Besten im Datenblatt nachschauen, auf der Platine ist der Eingang mit VIN und der Ausgang mit VO beschriftet)!
+Der 5-V-Spannungsregler gehört in das mit „LC78_**05**-0.5“ beschriftete Rechteck. Einbaurichtung beachten! Bei Unsicherheit am Besten im Datenblatt nachschauen, auf der Platine ist der Eingang mit VIN und der Ausgang mit VO beschriftet.
 
 Anschließend sollte die Platine ungefähr so aussehen:
 
