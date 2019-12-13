@@ -1,5 +1,11 @@
 # CAN ESP32
 
+Bei diesem Projekt handelt es sich um eine Display-Platine zum Auslesen von Fahrzeugdaten für die Renault ZOE (Q210, R240, Q90 und R90, nur bis 2019).
+Das Display wird mittels einer 3D-druckbaren Halterung in die Ablage unterhalb des R-Link eingelegt und über den OBD-Port an den CAN-Bus des Fahrzeugs angeschlossen. Es verwendet einen ESP32-Mikrocontroller mit WLAN-Funktionalität und kann per Webbrowser konfiguriert werden. 
+Platine V5 wird über den USB-Port des R-Link mit Strom versorgt. 
+Bei den Platinen V7 und V8 erfolgt die Stromversorgung über den OBD-Port. Hierbei schaltet sich die Platine beim Aufschließen des Fahrzeugs oder Starten eines Ladevorgangs automatisch ein (sobald Signale über den CAN-Bus empfangen werden). Nach Abschließen des Fahrzeugs bzw. Beendigung des Ladevorgangs kann sich das Display nach einer konfigurierbaren Zeitdauer auch selbst wieder ausschalten.
+Optional kann eine USB-Buchse integriert werden, über welche beispielsweise Mobilgeräte aufgeladen werden können.
+
 <pre>
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!! OHNE GEWÄHR, ALLES AUF EIGENE GEFAHR, NUR ZU TESTZWECKEN !!!!
