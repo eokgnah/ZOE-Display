@@ -40,7 +40,7 @@ Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display aufgelisteten Ha
 - C6: Elektrolyt-Kondensator 22 μF, min. 6,3 V
 
 #### Steckverbinder & Elektromechanik
-- OBD-Stecker
+- OBD-Stecker (z.B. https://www.kds-online.com/Shop6a/catalog/product_info.php/obd-modular-system-obd-steckverbinder-stecker-p-3458)
 - Piezo-Summer, mit Kabeln oder für Printmontage (RM 7,6 mm)
 - IC-Sockel DIP8 (für MCP2562)
 - USB-Buchse (optional)
