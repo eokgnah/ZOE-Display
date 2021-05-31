@@ -1,6 +1,6 @@
 # ZOE CAN ESP32
 
-Bei diesem Projekt handelt es sich um eine Display-Platine zum Auslesen von Fahrzeugdaten für die Renault ZOE (Q210, R240, Q90 und R90, nur bis 2019).
+Bei diesem Projekt handelt es sich um eine Display-Platine zum Auslesen von Fahrzeugdaten (z.B. State of Health, Ladeleistung, Reifendruck) für die Renault ZOE Phase 1 (Q210, R210, R240, Q90 und R90, nur bis 2019).
 
 Das Display wird mittels einer 3D-druckbaren Halterung in die Ablage unterhalb des R-Link eingelegt und über den direkt darunterliegenden OBD-Port an den CAN-Bus des Fahrzeugs angeschlossen. Es verwendet einen ESP32-Mikrocontroller mit WLAN-Funktionalität und kann per Webbrowser konfiguriert werden. 
 
