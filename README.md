@@ -44,9 +44,9 @@ Wohin           Bezeich.       ESP32 Pins       Bezeich.    Wohin
                 (CAN2 TX)   G32         GND
                 HR          G33         G19     MISO        Display,Touch,SD
                             G25         G18     SCLK        Display,Touch,SD
-GPS             GPS TX      G26         G5 
-GPS             GPS RX      G27         G17     CAN TX      CAN Bus
-BUZZER+                     G14         G16     CAN RX      CAN Bus 
+GPS-Modul       GPS TX      G26         G5 
+GPS-Modul       GPS RX      G27         G17     CAN TX      OBD-Anschluss
+BUZZER+                     G14         G16     CAN RX      OBD-Anschluss
                 POWER OFF   G12         G4      RST         Display
                             GND         G0      (BOOT)
 SD              CS          G13         G2      DC          Display
@@ -60,7 +60,7 @@ TX am GPS Modul!
 
 CAN2 ist derzeit experimentell. 
 
-ST = Screen Turn, ST=1 (mit 10k auf 3V3) -> Bildschirm um 180 Grad gedreht
+ST = Screen Turn, ST=1 (verbinden mit 3V3) -> Bildschirm um 180 Grad gedreht
 
 HR = Helligkeitsregelung, kann einen Transistor ansteuern, über den die LED-Hintergrundbeleuchtung des Displays gedimmt werden kann.
 
@@ -81,9 +81,9 @@ Wohin           Bezeich.       ESP32 Pins       Bezeich.    Wohin
                 (CAN2 TX)   G32         GND
 Display         HR          G33         G19     SPI MISO    Display
 Display         I²C SDA     G25         G18     SPI SCLK    Display
-GPS             GPS TX      G26         G5
-GPS             GPS RX      G27         G17     CAN TX      CAN Bus
-BUZZER+                     G14         G16     CAN RX      CAN Bus 
+GPS-Modul       GPS TX      G26         G5
+GPS-Modul       GPS RX      G27         G17     CAN TX      OBD-Anschluss
+BUZZER+                     G14         G16     CAN RX      OBD-Anschluss
                 POWER OFF   G12         G4      RST         Display
                             GND         G0      (BOOT)
 Display         CARDCS      G13         G2      DC          Display
@@ -97,7 +97,7 @@ TX am GPS Modul!
 
 CAN2 ist derzeit experimentell. 
 
-ST = Screen Turn, ST=1 (mit 10k auf 3V3) -> Bildschirm um 180 Grad gedreht
+ST = Screen Turn, ST=1 (verbinden mit 3V3) -> Bildschirm um 180 Grad gedreht
 
 HR = Helligkeitsregelung, an Pin GPIO33 liegt ein PWM Signal an, welches über Pin D5 am Display
 (neben CARDCS) die Regelung der Displayhelligkeit erlaubt. Achtung: Die Lötbrücke #5 auf der 
