@@ -23,10 +23,10 @@ Der Aufbau sollte damit auch für Unerfahrene kein allzu großes Problem darstel
 ## Verwendete Bauteile
 
 - ESP32-Development-Board (z.B. https://www.ebay.de/itm/162572643462 oder https://www.amazon.de/gp/product/B071P98VTG)
-- 2,8 Zoll 240 x 320 SPI TFT Panel resistiver Touchscreen (mit Display-Treiber ILI9341, z.B. https://www.amazon.de/gp/product/B0749N3S33/)
+- 2,8 Zoll 240 x 320 SPI TFT Panel resistiver Touchscreen (mit Display-Treiber ILI9341, z.B. https://www.amazon.de/dp/product/B082QVKT7M)
 - alternativ mit kapazitivem Touchscreen (Adafruit 1947 mit Display-Treiber ILI9341, z.B. https://www.amazon.de/gp/product/B00R3R65C0/ oder https://www.mouser.de/ProductDetail/Adafruit/1947?qs=GURawfaeGuArmJSJoJoDJA%3D%3D)
 - SD-Karte (bei resistivem Touchscreen) bzw. microSD-Karte (bei kapazitivem Touchscreen)
-- optional GPS-Modul (z.B. https://www.ebay.de/itm/163636495985 oder https://www.amazon.de/gp/product/B01N38EMBF/)
+- optional GPS-Modul (z.B. https://www.ebay.de/itm/384090884913 oder https://www.ebay.de/itm/164177481404)
 - Kleinteile (siehe Ordner zur jeweiligen Platinen-Version)
 
 ## Verbindungen mit resistivem Touchscreen
