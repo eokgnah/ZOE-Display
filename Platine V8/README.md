@@ -40,7 +40,7 @@ Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display aufgelisteten Ha
 - C6: Elektrolyt-Kondensator 22 μF, min. 6,3 V
 
 #### Steckverbinder & Elektromechanik
-- OBD-Stecker (z.B. https://www.kds-online.com/Shop6a/catalog/product_info.php/obd-modular-system-obd-steckverbinder-stecker-p-3458)
+- OBD-Stecker (z.B. https://kds-online.de/de/obd-minitools-modular-system-stecker-e.html)
 - Piezo-Summer, mit Kabeln oder für Printmontage (RM 7,6 mm)
 - IC-Sockel DIP8 (für MCP2562)
 - USB-Buchse (optional)
@@ -67,9 +67,11 @@ Bei dieser Platine werden alle Bauteile in Durchsteckmontage (Printmontage) best
 1. Anschlussdrähte des Bauteils zurechtbiegen (falls nötig).
 2. Bauteil von der Seite der Platine, auf der der Bestückungsdruck für das Bauteil angebracht ist, durch die entsprechenden Kontaktlöcher stecken.
 3. Platine umdrehen und die herausragenden Drähte (bzw. Metallstifte) nacheinander mit den Leiterbahnen verlöten. Zum Löten sollte man in der Regel zuerst den Lötkolben an die beiden zu verlötenden Metallteile halten (hier Draht und Leiterplattenkontakt), sodass die Lötspitze *beide* Teile erhitzt. Direkt anschließend gibt man das Lötzinn hinzu, welches sich nun kegelförmig (nicht kugelförmig :D) um den Draht verteilen sollte. 
-4. Erst jetzt überstehende Drähte abschneiden (falls vorhanden).
+4. Alle überstehenden Drähte abschneiden, und zwar möglichst direkt an der Lötstelle.
 
 Hierbei kann man entweder alle Bauteile einzeln nacheinander durchstecken und verlöten oder auch mehrere auf einmal. Damit die Bauteile während des Lötens nicht nach unten aus der Platine herausrutschen können, macht es Sinn, mit den flachsten Bauteilen anzufangen und sich nach und nach zu den höchsten Bauteilen vorzuarbeiten. Im Idealfall liegt die Platine dann immer auf dem Bauteil auf, welches als Nächstes angelötet werden soll. 
+
+Wenn ihr noch nie Bauteile auf eine Platine gelötet habt, ist es sicherlich hilfreich, vorher mal ein entsprechendes Tutorial-Video z.B. auf Youtube anzuschauen.
 
 ## Hinweise zum resistiven Touchscreen
 
@@ -226,9 +228,9 @@ Die Belegungen einer OBD2-Schnittstelle findet ihr hier: https://commons.wikimed
 
 Vier Pins werden benötigt: Fahrzeugmasse (GND) und +12 V zur Stromversorgung sowie CAN High und CAN Low zur Datenübertragung. 
 
-Achtung: Den Lötkolben nicht zu lange an die Metallstifte des OBD-Steckers halten, da sonst das Plastik drumherum aufweicht, wodurch der Metallstift sich womöglich leicht verdreht oder verschiebt. 
+Achtung: Den Lötkolben nicht zu lange an die Metallstifte des OBD-Steckers halten, da sonst das Plastik drumherum aufweicht, wodurch der Metallstift sich womöglich leicht verdreht oder verschiebt. Alternativ können die Metallstifte zum Anlöten der Drähte aus dem Steckergehäuse herausgenommen und anschließend wieder eingesetzt werden. Bei dem verlinkten OBD-Stecker ist alles nur zusammengesteckt und die Stifte werden von einer eingeklipsten Plastikkappe gehalten.
 
-Wenn ihr den 3D-gedruckten ZOE-Einleger verwendet, solltet ihr, nachdem ihr alle Kabel angelötet habt, die Kontaktstifte des OBD-Steckers zur Seite umbiegen (bzw. die unbenutzten entfernen), da diese sonst zu weit herausstehen.
+Wenn ihr den 3D-gedruckten ZOE-Einleger verwendet, solltet ihr, nachdem ihr alle Kabel angelötet habt, die Kontaktstifte des OBD-Steckers zur Seite umbiegen (bzw. die unbenutzten abschneiden oder entfernen), da diese sonst zu weit herausstehen.
 
 Am Ende sollte es etwa so aussehen. Ich habe für Masse und CAN Low einen schwarzen und für +12 V und CAN High einen roten Draht verwendet (ist leider auf dem Foto nicht erkennbar). Gegebenenfalls sollten die Lötstellen anschließend noch mit Heißkleber oder Schrumpfschläuchen umhüllt werden, damit kein Kurzschluss entstehen kann.
 
