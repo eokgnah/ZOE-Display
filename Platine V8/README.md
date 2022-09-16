@@ -13,8 +13,10 @@ von Michi (kepppfeff-ZOE)
 Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display aufgelisteten Hauptkomponenten und dem 3D-Druck werden folgende Bauteile benötigt (diese sind alle bei der Sammelbestellung enthalten):
 
 #### Module & Halbleiter
-- U2: Spannungsregler LC78_05-0.5 oder vergleichbar (Ausgang 5 V, 500 mA) bzw. bei Anschluss einer USB-Buchse Spannungsregler OKI-78SR-5/1.5-W36-C oder vergleichbar (Ausgang 5 V, 1500 mA)
-- U3: Spannungsregler LC78_03-0.5 oder LMO78_03-0.5 oder vergleichbar (Ausgang 3,3 V, 500 mA), stattdessen kann auch der interne Spannungsregler des ESP32 verwendet werden
+- U2: Spannungsregler LC78_05-0.5 oder vergleichbar (Ausgang 5 V, 500 mA) bzw. bei Anschluss einer USB-Buchse Spannungsregler OKI-78SR-5/1.5-W36-C oder vergleichbar (Ausgang 5 V, 1500...2000 mA)
+  - Bezugsquellen: z.B. https://www.tme.eu/de/details/amsr2-7805jz/dc-dc-wandler/aimtec/ oder https://www.reichelt.de/dc-dc-wandler-oki-78sr-8-w-5-v-1500-ma-sil-single-oki515w36c-p140735.html
+- U3: Spannungsregler LC78_03-0.5 oder LMO78_03-0.5 oder vergleichbar (Ausgang 3,3 V, 500 mA), stattdessen kann auch der interne Spannungsregler des ESP32 verwendet werden.
+  - Bezugsquellen: z.B. https://www.voelkner.de/products/1038822/ oder https://www.tme.eu/de/details/amsro-783.3-nz/dc-dc-wandler/aimtec/
 - Q1: P-Kanal-MOSFET IRFU9024N
 - IC4: CAN-Transceiver MCP2562 (DIP8)
 - D3, D4: Schottky-Dioden 1N5817
@@ -40,7 +42,7 @@ Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display aufgelisteten Ha
 - C6: Elektrolyt-Kondensator 22 μF, min. 6,3 V
 
 #### Steckverbinder & Elektromechanik
-- OBD-Stecker (z.B. https://kds-online.de/de/obd-minitools-modular-system-stecker-e.html)
+- OBD-Stecker (z.B. https://kds-online.de/de/obd-minitools-modular-system-stecker-e.html oder https://www.tme.eu/de/details/a-obd-e2/gehause-sonstiges-zubehor/minitools/sep-a-obd-e2/)
 - Piezo-Summer, mit Kabeln oder für Printmontage (RM 7,6 mm)
 - IC-Sockel DIP8 (für MCP2562)
 - USB-Buchse (optional)
