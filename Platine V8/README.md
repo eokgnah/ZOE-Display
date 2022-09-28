@@ -1,6 +1,6 @@
-# Platine V8
+# Platine V8 - Lötanleitung
 
-von Michi (kepppfeff-ZOE)
+von Michi (Kontakt: kepppfeff@outlook.de oder im GoingElectric-Forum: kepppfeff-ZOE)
 
 <pre>
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -10,7 +10,7 @@ von Michi (kepppfeff-ZOE)
 
 ## Benötigte Bauteile
 
-Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display aufgelisteten Hauptkomponenten und dem 3D-Druck werden folgende Bauteile benötigt (diese sind alle bei der Sammelbestellung enthalten):
+Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display aufgelisteten Hauptkomponenten und dem 3D-Druck werden die folgenden Bauteile benötigt. I.d.R. habe ich die meisten kleineren Bauteile da und kann einen "Bausatz" inklusive Platine zusammenstellen und verschicken, bei Interesse einfach schreiben.
 
 #### Module & Halbleiter
 - U2: Spannungsregler LC78_05-0.5 oder vergleichbar (Ausgang 5 V, 500 mA) bzw. bei Anschluss einer USB-Buchse Spannungsregler OKI-78SR-5/1.5-W36-C oder vergleichbar (Ausgang 5 V, 1500...2000 mA)
@@ -26,11 +26,11 @@ Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display aufgelisteten Ha
 
 #### Passive Bauelemente
 - R1: Widerstand 100 kΩ ± 50 % (nur bei Verwendung des kapazitiven Displays)
-- R3: Widerstand 1,5 kΩ ± 5 % (nur bei Verwendung des resistiven Displays mit eingebautem Transistor) bzw. Widerstand 5,1 Ω ± 5 % (nur bei Verwendung des resistiven Displays ohne eingebauten Transistor)
-- R4: Widerstand 15 kΩ ± 5 % (nur bei Verwendung des kapazitiven Displays der alten Version)
+- R3: Widerstand 1,5 kΩ ± 5 % (nur bei Verwendung des resistiven Displays mit eingebautem Transistor, siehe weiter unten) bzw. Widerstand 5,1 Ω ± 5 % (nur bei Verwendung des resistiven Displays ohne eingebauten Transistor, siehe weiter unten)
+- R4: Widerstand 15 kΩ ± 5 % (nur bei Verwendung des kapazitiven Displays der alten Version, siehe weiter unten)
 - R5: Widerstand 120 Ω ± 10 %
 - R6: Widerstand 15 kΩ ± 5 %
-- R7: Widerstand 15 kΩ ± 5 % (nur bei Verwendung des kapazitiven Displays der alten Version)
+- R7: Widerstand 15 kΩ ± 5 % (nur bei Verwendung des kapazitiven Displays der alten Version, siehe weiter unten)
 - R8: Widerstand 100 kΩ ± 5 %
 - R9: Widerstand 470 kΩ ± 10 %
 - R10, R11: Widerstände 1,2 MΩ ± 5 %
@@ -196,7 +196,7 @@ Bevor ihr Display und Platine zusammenfügt, kontrolliert nochmal, ob alle Löts
 
 Beim kapazitiven Display empfehle ich, dieses erstmal in den 3D-gedruckten Einleger zu setzen (microSD-Karte einlegen und Schutzfolie abziehen!), anschließend die Platine darauf zu platzieren und erst dann, im „lose eingebauten Zustand“, beides zu verlöten. 
 
-Beim resistiven Display ist dieses Vorgehen nicht erforderlich, hier bietet es sich stattdessen an, wieder vier Plastikteile einer Stiftleiste als Abstandshalter zu nutzen. Achtet darauf, dass der SD-Karten-Halter nicht mit von der Platine abstehenden Drähten in Berührung kommt. 
+Beim resistiven Display ist dieses Vorgehen nicht erforderlich, hier bietet es sich stattdessen an, wieder vier Plastikteile einer Stiftleiste als Abstandshalter zu nutzen. Achtet darauf, dass der SD-Karten-Halter nicht mit von der Platine abstehenden Drähten in Berührung kommt. Zur Sicherheit kann man den SD-Karten-Halter mit Kaptonband, Tesafilm oder ähnlichem überkleben. 
 
 #### Schritt 14: GPS-Modul
 
