@@ -1,4 +1,4 @@
-# Platine V8 - Lötanleitung
+# Platine V8 — Lötanleitung
 
 von Michi (Kontakt: kepppfeff@outlook.de oder im GoingElectric-Forum: kepppfeff-ZOE)
 
@@ -10,13 +10,15 @@ von Michi (Kontakt: kepppfeff@outlook.de oder im GoingElectric-Forum: kepppfeff-
 
 ## Benötigte Bauteile
 
-Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display aufgelisteten Hauptkomponenten und dem 3D-Druck werden die folgenden Bauteile benötigt. I.d.R. habe ich die meisten kleineren Bauteile da und kann einen "Bausatz" inklusive Platine zusammenstellen und verschicken, bei Interesse einfach schreiben.
+Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display/blob/master/README.md aufgelisteten Hauptkomponenten und dem 3D-Druck werden die folgenden Bauteile benötigt. I.d.R. habe ich die meisten kleineren Bauteile da und kann einen "Bausatz" inklusive Platine zusammenstellen und verschicken, bei Interesse einfach schreiben.
 
 #### Module & Halbleiter
-- U2: Spannungsregler LC78_05-0.5 oder vergleichbar (Ausgang 5 V, 500 mA) bzw. bei Anschluss einer USB-Buchse Spannungsregler OKI-78SR-5/1.5-W36-C oder vergleichbar (Ausgang 5 V, 1500...2000 mA)
+- U2: Spannungsregler OKI-78SR-5/1.5-W36-C oder vergleichbar (Ausgang 5 V, 1500...2000 mA)
   - Bezugsquellen: z.B. https://www.tme.eu/de/details/amsr2-7805jz/dc-dc-wandler/aimtec/ oder https://www.reichelt.de/dc-dc-wandler-oki-78sr-8-w-5-v-1500-ma-sil-single-oki515w36c-p140735.html
-- U3: Spannungsregler LC78_03-0.5 oder LMO78_03-0.5 oder vergleichbar (Ausgang 3,3 V, 500 mA), stattdessen kann auch der interne Spannungsregler des ESP32 verwendet werden.
+  - Falls keine USB-Buchse an die Platine angeschlossen werden soll, kann stattdessen auch ein schwächerer (günstigerer) Spannungsregler verwendet werden, z.B. LC78_05-0.5 oder vergleichbar (Ausgang 5 V, 500 mA)
+- U3: Spannungsregler LC78_03-0.5 oder LMO78_03-0.5 oder vergleichbar (Ausgang 3,3 V, 500 mA)
   - Bezugsquellen: z.B. https://www.voelkner.de/products/1038822/ oder https://www.tme.eu/de/details/amsro-783.3-nz/dc-dc-wandler/aimtec/
+  - Stattdessen kann auch der interne Spannungsregler des ESP32-Boards verwendet werden, dieser ist jedoch nicht so effizient und sorgt für zusätzliche Aufheizung des Mikrocontrollers, was evtl. dessen Lebensdauer verringert.
 - Q1: P-Kanal-MOSFET IRFU9024N
 - IC4: CAN-Transceiver MCP2562 (DIP8)
 - D3, D4: Schottky-Dioden 1N5817
@@ -171,7 +173,11 @@ Nun werden die 3-polige Schraubklemme für die Stromversorgung und die 2-polige 
 
 Die Platine ist kompatibel zu zwei verschieden großen ESP32-Boards (mit dem selben Pinout), daher ist die eine Lochreihe doppelt vorhanden. 
 
-Bei günstigen ESP32-Boards sind oft die Stiftleisten nicht ganz gerade eingelötet, dann müsst ihr diese noch etwas zurechtbiegen, um sie in die Kontaktlöcher der Platine zu bekommen. Damit der ESP32 nachher in der perfekten Höhe (und gerade) montiert ist, bietet es sich an, auf die vier äußersten Pins jeweils als Abstandshalter ein Plastikteil einer Stiftleiste draufzuschieben, ähnlich wie hier: https://c1.staticflickr.com/5/4850/39953812743_f40f2e705d.jpg. 
+Bei günstigen ESP32-Boards sind oft die Stiftleisten nicht ganz gerade eingelötet, dann müsst ihr diese noch etwas zurechtbiegen, um sie in die Kontaktlöcher der Platine zu bekommen.
+
+Damit der ESP32 nachher in der perfekten Höhe (und gerade) montiert ist, bietet es sich an, auf die vier äußersten Pins jeweils als Abstandshalter ein Plastikteil einer Stiftleiste draufzuschieben. Hierzu aus einer vierpoligen Stiftleiste alle Metallstifte herausziehen und anschließend das Plastikteil in seine vier Einzelteile zerbrechen. Am Ende sollte es dann so aussehen (hier sind zusätzlich die Abstandshalter des resistiven Touchdisplays zu sehen, beim kapazitiven werden hingegen keine benötigt):
+
+![Abstandshalter](/Platine%20V8/Bilder/Abstandshalter%20Stiftleisten.jpg)
 
 #### Schritt 10: 3,3-V-Spannungsregler
 
