@@ -57,13 +57,13 @@ Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display/blob/master/READ
 
 Wer bereits Platinen bestückt hat, kann diesen Abschnitt gerne überspringen ;-)
 
-Zum Zusammenbau der Elektronik benötigt ihr Folgendes:
+Zum Zusammenbau des ZOE-Displays benötigt ihr Folgendes:
 - Lötkolben und Lötzinn, Lötspitzen-Reinigungstool (feuchter Schwamm, Spiralwolle etc.)
 - Seitenschneider bzw. Vornschneider
 - Spitzzange
 - Abisolierzange
 - Schlitz-Schraubendreher
-- Heißklebepistole und -sticks
+- Heißklebepistole und -sticks, alternativ 2-Komponenten-Kleber oder ähnliches
 - Eventuell (falls ihr etwas falsch verlötet habt): Entlötsaugpumpe, Entlötlitze etc.
 
 Bei dieser Platine werden alle Bauteile in Durchsteckmontage (Printmontage) bestückt. Die grundlegende Vorgehensweise, um ein Bauteil einzulöten, ist Folgende:
