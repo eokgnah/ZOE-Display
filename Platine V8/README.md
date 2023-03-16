@@ -14,10 +14,10 @@ Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display/blob/master/READ
 
 #### Module & Halbleiter
 - U2: Spannungsregler OKI-78SR-5/1.5-W36-C oder vergleichbar (Ausgang 5 V, 1500...2000 mA)
-  - Bezugsquellen: z.B. https://www.tme.eu/de/details/amsr2-7805jz/dc-dc-wandler/aimtec/ oder https://www.reichelt.de/dc-dc-wandler-oki-78sr-8-w-5-v-1500-ma-sil-single-oki515w36c-p140735.html
+  - Bezugsquellen: z.B. https://www.tme.eu/de/details/amsr2-7805jz/dc-dc-wandler/aimtec/ oder https://www.reichelt.de/dc-dc-wandler-oki-78sr-8-w-5-v-1500-ma-sil-single-oki515w36c-p140735.html oder https://www.voelkner.de/products/1038830/
   - Falls keine USB-Buchse an die Platine angeschlossen werden soll, kann stattdessen auch ein schwächerer (günstigerer) Spannungsregler verwendet werden, z.B. LC78_05-0.5 oder vergleichbar (Ausgang 5 V, 500 mA)
 - U3: Spannungsregler LC78_03-0.5 oder LMO78_03-0.5 oder vergleichbar (Ausgang 3,3 V, 500 mA)
-  - Bezugsquellen: z.B. https://www.voelkner.de/products/1038822/ oder https://www.tme.eu/de/details/amsro-783.3-nz/dc-dc-wandler/aimtec/
+  - Bezugsquellen: z.B. https://www.tme.eu/de/details/amsro-783.3-nz/dc-dc-wandler/aimtec/ oder https://www.reichelt.de/dc-dc-wandler-1-65-w-3-3-v-500-ma-sil-lmo78-03-0-5-p242833.html oder https://www.voelkner.de/products/1038822/
   - Stattdessen kann auch der interne Spannungsregler des ESP32-Boards verwendet werden, dieser ist jedoch nicht so effizient und sorgt für zusätzliche Aufheizung des Mikrocontrollers, was evtl. dessen Lebensdauer verringert.
 - Q1: P-Kanal-MOSFET IRFU9024N
 - IC4: CAN-Transceiver MCP2562 (DIP8)
