@@ -10,7 +10,7 @@ von Michi (Kontakt: kepppfeff@outlook.de oder im GoingElectric-Forum: kepppfeff-
 
 ## Benötigte Bauteile
 
-Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display/blob/master/README.md aufgelisteten Hauptkomponenten und dem 3D-Druck werden die folgenden Bauteile benötigt. I.d.R. habe ich die meisten kleineren Bauteile da und kann einen "Bausatz" inklusive Platine zusammenstellen und verschicken, bei Interesse einfach schreiben.
+Zusätzlich zu den unter https://github.com/eokgnah/ZOE-Display/blob/master/README.md aufgelisteten Hauptkomponenten und dem 3D-Druck werden die folgenden Bauteile benötigt. 
 
 #### Module & Halbleiter
 - U2: Spannungsregler OKI-78SR-5/1.5-W36-C oder vergleichbar (Ausgang 5 V, 1500...2000 mA)
@@ -186,7 +186,7 @@ Falls der Spannungsregler LMO78_03-0.5 verwendet wird (wie im gleich folgenden F
 
 #### Schritt 11: Elektrolyt-Kondensatoren
 
-Bei den Elkos (C1, C5 und C6) muss auf die Polarität geachtet werden. Der Pluspol ist durch einen längeren Draht, der Minuspol durch einen auffälligen weißen Strich auf dem Gehäuse gekennzeichnet.
+Bei den Elkos (C1, C5 und C6) muss auf die Polarität geachtet werden. Der Pluspol ist durch einen längeren Draht, der Minuspol durch einen weißen Strich auf dem Gehäuse gekennzeichnet.
 
 #### Schritt 12: 5-V-Spannungsregler
 
@@ -202,7 +202,7 @@ Bevor ihr Display und Platine zusammenfügt, kontrolliert nochmal, ob alle Löts
 
 Beim kapazitiven Display empfehle ich, dieses erstmal in den 3D-gedruckten Einleger zu setzen (microSD-Karte einlegen und Schutzfolie abziehen!), anschließend die Platine darauf zu platzieren und erst dann, im „lose eingebauten Zustand“, beides zu verlöten. 
 
-Beim resistiven Display ist dieses Vorgehen nicht erforderlich, hier bietet es sich stattdessen an, wieder vier Plastikteile einer Stiftleiste als Abstandshalter zu nutzen. Achtet darauf, dass der SD-Karten-Halter nicht mit von der Platine abstehenden Drähten in Berührung kommt. Zur Sicherheit kann man den SD-Karten-Halter mit Kaptonband, Tesafilm oder ähnlichem überkleben. 
+Beim resistiven Display ist dieses Vorgehen nicht erforderlich, hier bietet es sich stattdessen an, wieder vier Plastikteile einer Stiftleiste als Abstandshalter zu nutzen. Achtet darauf, dass der SD-Karten-Halter nicht mit von der Platine abstehenden Drähten in Berührung kommt. Zur Sicherheit bietet es sich an, den SD-Karten-Halter mit Kaptonband, Tesafilm oder ähnlichem zu überkleben. 
 
 #### Schritt 14: GPS-Modul
 
@@ -224,11 +224,11 @@ Um die USB-Buchse in den 3D-gedruckten Einleger zu bekommen, müssen zunächst d
 
 An Masse (GND) und +5 V lötet ihr Drähte an, die dann an der Platine angeschlossen werden können. Achtet darauf, dass durch das Lötzinn keine Verbindung mit dem Buchsengehäuse hergestellt wird.
 
-Die beiden Datenleitungen (die mittleren Pins) können im einfachsten Fall kurzgeschlossen werden, dies entspricht der EU-standardisierten Signalisierung eines USB-Ladegeräts. Hierzu einfach die beiden Drähte etwas zur Mitte biegen und mit einem Tropfen Lötzinn verbinden (wieder darf keine Verbindung zum Buchsengehäuse entstehen). Manche USB-Geräte akzeptieren diese Signalisierung allerdings nicht und laden entweder gar nicht oder nur langsam. Um die USB-Buchse für solche Geräte kompatibel zu machen, müsst ihr eventuell statt der Kurzschlussmethode mit Widerständen bestimmte Spannungen an die Datenleitungen anlegen. Mehr Infos dazu findet ihr z.B. hier: http://dh2mic.darc.de/files/usb-adapter-v12.pdf
+Die beiden Datenleitungen (die mittleren Pins) können im einfachsten Fall kurzgeschlossen werden, dies entspricht der EU-standardisierten Signalisierung eines USB-Ladegeräts. Hierzu einfach die beiden Drähte etwas zur Mitte biegen und mit einem Tropfen Lötzinn verbinden (wieder darf keine Verbindung zum Buchsengehäuse entstehen). Manche USB-Geräte akzeptieren diese Signalisierung allerdings nicht und laden nur langsam. Um die USB-Buchse für solche Geräte kompatibel zu machen, müsst ihr eventuell statt der Kurzschlussmethode bestimmte Spannungen mittels Widerständen an die Datenleitungen anlegen. Mehr Infos dazu findet ihr z.B. hier: http://dh2mic.darc.de/files/usb-adapter-v12.pdf
 
 ![USB-Buchse](/Platine%20V8/Bilder/20190320_204215.jpg)
 
-Zum Schluss noch alles mit Heißkleber versiegeln, damit kein Kurzschluss entstehen kann und die USB-Buchse nicht herausrutscht.
+Zum Schluss noch alles mit Heißkleber, 2-Komponentenkleber o.ä. versiegeln, damit kein Kurzschluss entstehen kann und die USB-Buchse nicht herausrutscht.
 
 #### OBD-Stecker
 
@@ -236,13 +236,13 @@ Die Belegungen einer OBD2-Schnittstelle findet ihr hier: https://commons.wikimed
 
 Vier Pins werden benötigt: Fahrzeugmasse (GND) und +12 V zur Stromversorgung sowie CAN High und CAN Low zur Datenübertragung. 
 
-Achtung: Den Lötkolben nicht zu lange an die Metallstifte des OBD-Steckers halten, da sonst das Plastik drumherum aufweicht, wodurch der Metallstift sich womöglich leicht verdreht oder verschiebt. Alternativ können die Metallstifte zum Anlöten der Drähte aus dem Steckergehäuse herausgenommen und anschließend wieder eingesetzt werden. Bei dem verlinkten OBD-Stecker ist alles nur zusammengesteckt und die Stifte werden von einer eingeklipsten Plastikkappe gehalten.
+Achtung: Den Lötkolben nicht zu lange an die Metallstifte des OBD-Steckers halten, da sonst das Plastik drumherum aufweicht, wodurch der Metallstift sich womöglich leicht verdreht oder verschiebt. Alternativ können die Metallstifte zum Anlöten der Drähte aus dem Steckergehäuse herausgenommen und anschließend wieder eingesetzt werden. Die oben verlinkten OBD-Stecker sind nur zusammengesteckt und die Stifte werden von einer eingeklipsten Plastikkappe gehalten.
 
-Wenn ihr den 3D-gedruckten ZOE-Einleger verwendet, solltet ihr, nachdem ihr alle Kabel angelötet habt, die Kontaktstifte des OBD-Steckers zur Seite umbiegen (bzw. die unbenutzten abschneiden oder entfernen), da diese sonst zu weit herausstehen.
-
-Am Ende sollte es etwa so aussehen. Ich habe für Masse und CAN Low einen schwarzen und für +12 V und CAN High einen roten Draht verwendet (ist leider auf dem Foto nicht erkennbar). Gegebenenfalls sollten die Lötstellen anschließend noch mit Heißkleber oder Schrumpfschläuchen umhüllt werden, damit kein Kurzschluss entstehen kann.
+Wenn ihr den 3D-gedruckten ZOE-Einleger verwendet, müsst ihr die Kontaktstifte des OBD-Steckers zur Seite umbiegen (bzw. die unbenutzten abschneiden oder entfernen), da diese sonst zu weit herausstehen. Das sollte dann etwa so aussehen. 
 
 ![OBD-Stecker](/Platine%20V8/Bilder/OBD-Stecker-beschriftet.jpg)
+
+Anschließend sollten die Lötstellen unbedingt noch z.B. mit Heißkleber oder Schrumpfschläuchen umhüllt werden, damit kein Kurzschluss entstehen kann und die Drähte nicht mit der Zeit (z.B. durch Vibrationen) abbrechen können.
 
 #### Schraubklemmblöcke
 
