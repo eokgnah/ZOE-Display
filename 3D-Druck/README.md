@@ -9,6 +9,5 @@ Hier einige 3D-Druck-Dienstleister:
 - https://www.3ddesign24.de/
 - https://fdm-druckservice.de
 - https://3-dreams.de
-- https://www.s3dproducts.de/3d-druck-service/
 
 Aktuell habe ich noch zwei 3D-gedruckte Teile für das resistive Display aus grauem ABS abzugeben, welche ich bei 3ddesign24.de bestellt habe. Schaumstoffstreifen für den sicheren Halt in der ZOE habe ich bereits rundherum angebracht. Bei Interesse gerne schreiben an kepppfeff@outlook.de.
